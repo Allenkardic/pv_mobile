@@ -1,18 +1,19 @@
 import React from 'react';
-import {StyleSheet, View} from 'react-native';
+import {StyleSheet, View, ViewStyle} from 'react-native';
 import {colors, HP, images} from '../constants';
 import {H5, Image, H3} from '../components';
 
 interface Props {
   name: string;
   image: string;
+  style?: ViewStyle;
 }
 
-export default function HomeHeader({name, image}: Props) {
+export default function HomeHeader({name, image, style}: Props) {
   const styles = useStyles();
 
   return (
-    <View>
+    <View style={{...style}}>
       <View style={styles.contentOne}>
         <H5 color={colors.greyVariantOne}>Hi {name}</H5>
         <Image

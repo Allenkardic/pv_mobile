@@ -1,14 +1,6 @@
-import {
-  charactersSliceReducer,
-  favouriteCharactersSliceReducer,
-  singleCharacterSliceReducer,
-  settingsSliceReducer,
-} from './slice';
+import {mealsSliceReducer} from './slice';
 const state = {
-  characters: charactersSliceReducer,
-  favouriteCharacters: favouriteCharactersSliceReducer,
-  singleCharacter: singleCharacterSliceReducer,
-  settings: settingsSliceReducer,
+  meals: mealsSliceReducer,
 };
 
 export const testAppSelector = (f: any) => f(state);

@@ -38,6 +38,7 @@ export default function ImageWithName({
         style={styles.img}
       />
       <H6
+        center
         color={isSelected ? colors.white : colors.black}
         semiBold
         style={styles.titleText}>

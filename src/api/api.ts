@@ -1,11 +1,7 @@
-import {string} from 'yup';
-import {CharacterType, CharacterResultType, EpisodeType} from '../types';
+import {CategoriesType, MealsType} from '../types';
 
-const BASE_URL = 'https://rickandmortyapi.com/api/';
-
-/*
- ** Helpers Start **
- */
+// const BASE_URL = 'http//www.themealdb.com/api/json/v1/1/';
+const BASE_URL = 'https://www.themealdb.com/api/json/v1/1/';
 
 interface HttpResponse<T> extends Response {
   parsedBody?: T;
@@ -27,38 +23,19 @@ async function http<T>(request: RequestInfo): Promise<HttpResponse<T>> {
   return response;
 }
 
-async function get<T>(
-  path: string,
-  // args: RequestInit = {method: 'get'},
-): Promise<HttpResponse<T>> {
+async function get<T>(path: string): Promise<HttpResponse<T>> {
   return http<T>(`${BASE_URL}${path}`);
-  // If we need args you can use the below, but causes require cycle
-  // return await http<T>(new Request(`${BASE_URL}${path}`, args));
 }
 
-// export type Characters = characterType[];
-export type Characters = CharacterType;
+export type Categories = CategoriesType[];
+export type Meals = MealsType[];
 
-/**
- * Docs
- * https://docs.cloud.coinbase.com/exchange/reference/exchangerestapi_getproducttrades
- */
-// const history = async (page: number, count: number) =>
-const getCharacters = async (payload: any) =>
-  get<Characters>(
-    `character/?page=${payload.page}&name=${payload.name}&status=${payload.status}`,
-  );
+const getCategories = async () => get<Categories>(`categories.php`);
 
-const getSingleCharacter = async (id: number) =>
-  get<CharacterResultType>(`character/${id}`);
-
-const getFirstEpisode = async (id: number) => get<EpisodeType>(`episode/${id}`);
-
-const getLastEpisode = async (id: number) => get<EpisodeType>(`episode/${id}`);
+const getMeals = async (payload: string) =>
+  get<Meals>(`filter.php?c=${payload}`);
 
 export const api = {
-  getCharacters,
-  getSingleCharacter,
-  getFirstEpisode,
-  getLastEpisode,
+  getCategories,
+  getMeals,
 };

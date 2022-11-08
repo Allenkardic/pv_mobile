@@ -15,8 +15,8 @@ interface IProps {
   keyExtractor: (_: any, index: number) => any;
   emptyListText: string;
   listHeader?: any;
-  numColumns?: number;
   style?: ViewStyle;
+  horizontal?: boolean;
 }
 
 export default function SJFlatList(props: IProps) {
@@ -30,7 +30,7 @@ export default function SJFlatList(props: IProps) {
     renderItem,
     showsVerticalScrollIndicator,
     listHeader,
-    numColumns,
+    horizontal = false,
     style,
     ...otherProps
   } = props;
@@ -40,6 +40,7 @@ export default function SJFlatList(props: IProps) {
 
   return (
     <Animated.FlatList
+      horizontal={horizontal}
       data={data}
       style={[styles.container, {...style}]}
       refreshing={refreshing}
@@ -49,7 +50,6 @@ export default function SJFlatList(props: IProps) {
       renderItem={renderItem}
       entering={FadeIn.duration(300)}
       showsVerticalScrollIndicator={showsVerticalScrollIndicator || false}
-      numColumns={numColumns}
       ListEmptyComponent={<EmptyList subTitle={emptyListText} />}
       refreshControl={
         <RefreshControl
@@ -69,7 +69,7 @@ export default function SJFlatList(props: IProps) {
 const useStyles = (props: {theme: any}) =>
   StyleSheet.create({
     container: {
-      flex: 1,
+      // flex: 1,
       backgroundColor: props.theme.colors.background,
     },
   });

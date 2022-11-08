@@ -1,16 +1,9 @@
 import {combineReducers} from '@reduxjs/toolkit';
-import {
-  charactersSliceReducer,
-  favouriteCharactersSliceReducer,
-  singleCharacterSliceReducer,
-  settingsSliceReducer,
-} from './slice';
+import {mealsSliceReducer, categoriesSliceReducer} from './slice';
 
 const rootReducer = combineReducers({
-  characters: charactersSliceReducer,
-  favouriteCharacters: favouriteCharactersSliceReducer,
-  singleCharacter: singleCharacterSliceReducer,
-  settings: settingsSliceReducer,
+  meals: mealsSliceReducer,
+  categories: categoriesSliceReducer,
 });
 
 export type RootState = ReturnType<typeof rootReducer>;

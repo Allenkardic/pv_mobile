@@ -1,91 +1,187 @@
-import React, {useState} from 'react';
-import {
-  View,
-  StyleSheet,
-  Text,
-  Platform,
-  SafeAreaView,
-  ImageBackground,
-} from 'react-native';
+import React, {useState, useEffect} from 'react';
+import {View, StyleSheet, SafeAreaView, Alert} from 'react-native';
 import {NavigationProp, ParamListBase} from '@react-navigation/native';
 import {
-  Button,
-  H2,
-  H3,
   H4,
   H6,
   SearchInput,
   ImageWithName,
   FoodCard,
-  Image,
+  FlatList,
 } from '../../components';
-import {
-  colors,
-  currencyFormat,
-  spacing,
-  HP,
-  images,
-  placeholdersImage,
-} from '../../constants';
+import {colors, spacing, placeholdersImage} from '../../constants';
 import {HomeHeader, CartCard} from '../../partials';
-
+import {useAppDispatch, useAppSelector} from '../../redux/redux-hooks';
 import stack from '../../constants/routes';
-
+import {getCategories, getMeals} from '../../redux/slice';
+import {MealsType, CategoriesType} from '../../types';
 interface IProps {
   navigation: NavigationProp<ParamListBase>;
 }
 function Home({navigation}: IProps) {
+  const dispatch = useAppDispatch();
+  const mealsState = useAppSelector(state => state.meals);
+  const categoriesState = useAppSelector(state => state.categories);
   const {productDetails} = stack.stack;
   const [searchedValue, setSearchedValue] = useState('');
+  const [mealsList, setMealsList] = useState<MealsType[]>([]);
+  const [categoriesList, setCategoriesList] = useState<CategoriesType[]>([]);
+  const [categoriesListSearch, setCategoriesListSearch] = useState<
+    CategoriesType[]
+  >([]);
+
+  useEffect(() => {
+    dispatch(getCategories());
+  }, []);
+
+  useEffect(() => {
+    if (categoriesState.status === 'failed') {
+      Alert.alert('Error occured');
+    } else {
+      setCategoriesList(categoriesState?.data);
+      setCategoriesListSearch(categoriesState?.data);
+    }
+  }, [categoriesState]);
+
+  useEffect(() => {
+    dispatch(getMeals('Pasta'));
+  }, []);
+
+  useEffect(() => {
+    if (mealsState.status === 'failed') {
+      Alert.alert('Error occured');
+    } else {
+      setMealsList(mealsState?.data);
+    }
+  }, [mealsState]);
+
   const handleSearch = (text: string) => {
-    console.log(text, 'text');
+    if (text.length > 1) {
+      const searchResult = categoriesList.filter(el =>
+        el.strCategory.toLocaleLowerCase().includes(text),
+      );
+      setCategoriesListSearch(searchResult);
+    } else {
+      setCategoriesListSearch(categoriesList);
+    }
     setSearchedValue(text);
   };
+
+  const handleSelectedMeal = (item: any) => {
+    const itemToEdit = item;
+    const updatedProduct: any = [...mealsList].map((el: any) => {
+      if (el.idMeal === itemToEdit.idMeal) {
+        el.isSelected = !el.isSelected;
+      } else {
+        el.isSelected = false;
+      }
+      return el;
+    });
+    setMealsList(updatedProduct);
+  };
+
+  const renderItemCategories = ({item}: any) => {
+    const {strCategory, strCategoryThumb} = item;
+    return (
+      <FoodCard
+        onPress={() => {}}
+        image={strCategoryThumb}
+        title={strCategory}
+        price={9.9}
+        calories={39}
+        time={'15'}
+      />
+    );
+  };
+
+  const renderItemMeals = ({item}: any) => {
+    const {strMeal, strMealThumb, isSelected} = item;
+    return (
+      <ImageWithName
+        onPress={() => handleSelectedMeal(item)}
+        image={strMealThumb}
+        title={strMeal}
+        isSelected={isSelected}
+      />
+    );
+  };
+
   return (
-    <View style={styles.container}>
-      <SafeAreaView>
-        <HomeHeader name="Aliakwe" image={placeholdersImage} />
+    <>
+      <View style={styles.container}>
+        <SafeAreaView>
+          <HomeHeader
+            name="Aliakwe"
+            image={placeholdersImage}
+            style={styles.headerContainer}
+          />
+        </SafeAreaView>
         <SearchInput
           value={searchedValue}
           onChangeText={(text: string) => handleSearch(text)}
           placeholder="search.."
           filterCount={2}
+          style={styles.searchInputContainer}
         />
-        <View style={{marginLeft: spacing.xxsmall, flexDirection: 'row'}}>
-          <ImageWithName onPress={() => {}} title="hello" isSelected={true} />
-          <ImageWithName onPress={() => {}} title="hello" isSelected={false} />
-          <ImageWithName onPress={() => {}} title="hello" isSelected={true} />
-          <ImageWithName onPress={() => {}} title="hello" isSelected={true} />
+
+        <View
+          style={{
+            marginLeft: spacing.xxsmall,
+          }}>
+          <FlatList
+            horizontal
+            data={mealsList}
+            renderItem={renderItemMeals}
+            emptyListText="There are no meals found"
+            onEndReached={() => {}}
+            onRefresh={() => {}}
+            refreshing={mealsState.status === 'loading'}
+            keyExtractor={(_: any, index: number) => {
+              return index.toString() ?? '';
+            }}
+          />
         </View>
         <View style={styles.seeAllContainer}>
           <H4 bold>Popular items</H4>
           <H6 color={colors.greyDark}>See All</H6>
         </View>
-        <View style={{marginLeft: spacing.xxsmall, flexDirection: 'row'}}>
-          <FoodCard
-            title="Melting Cheese Pizza"
-            onPress={() => navigation.navigate(productDetails)}
-            price={9.9}
-            calories={44}
-            time={'20'}
-          />
-          <FoodCard
-            title="Melting Cheese Pizza"
-            onPress={() => {}}
-            price={9.9}
-            calories={39}
-            time={'15'}
+
+        <View
+          style={{
+            marginLeft: spacing.xxsmall,
+          }}>
+          <FlatList
+            horizontal
+            data={categoriesListSearch}
+            renderItem={renderItemCategories}
+            emptyListText="There are no categories found"
+            onEndReached={() => {}}
+            onRefresh={() => {}}
+            refreshing={categoriesState.status === 'loading'}
+            keyExtractor={(_: any, index: number) => {
+              return index.toString() ?? '';
+            }}
           />
         </View>
-
+      </View>
+      <View style={{marginBottom: spacing.xsmall}}>
         <CartCard />
-      </SafeAreaView>
-    </View>
+      </View>
+    </>
   );
 }
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+  },
+  headerContainer: {
+    marginHorizontal: spacing.xxsmall,
+    // paddingTop: spacing.xxsmall,
+  },
+  searchInputContainer: {
+    marginTop: spacing.xsmall,
+    marginBottom: spacing.xsmall,
+    marginHorizontal: spacing.xxsmall,
   },
   seeAllContainer: {
     flexDirection: 'row',
@@ -94,23 +190,6 @@ const styles = StyleSheet.create({
     paddingHorizontal: spacing.xxsmall,
     marginTop: spacing.xsmall,
     marginBottom: spacing.xxsmall,
-  },
-  imgContainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    paddingHorizontal: spacing.xsmall,
-    paddingVertical: spacing.xsmall,
-  },
-
-  imgStyle: {
-    // height: HP('13%'),
-    width: '100%',
-    // alignSelf: 'flex-end',
-    // resizeMode: 'contain',
-    resizeMode: 'stretch',
-    // resizeMode: 'center',
-    // borderRadius: borderRadius.medium,
   },
 });
 
