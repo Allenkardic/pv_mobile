@@ -2,7 +2,7 @@ import React from 'react';
 import {StyleSheet, View, ImageBackground} from 'react-native';
 import {useTheme} from '@react-navigation/native';
 import {colors, spacing, images, placeholdersImage} from '../constants';
-import {H4, H6, ActivityLabel, Image} from '../components';
+import {H4, H6, Image} from '../components';
 
 interface Props {}
 

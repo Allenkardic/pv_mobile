@@ -35,6 +35,7 @@ interface IProps {
   navigation: NavigationProp<ParamListBase>;
 }
 function Home({navigation}: IProps) {
+  const {productDetails} = stack.stack;
   const [searchedValue, setSearchedValue] = useState('');
   const handleSearch = (text: string) => {
     console.log(text, 'text');
@@ -63,7 +64,7 @@ function Home({navigation}: IProps) {
         <View style={{marginLeft: spacing.xxsmall, flexDirection: 'row'}}>
           <FoodCard
             title="Melting Cheese Pizza"
-            onPress={() => {}}
+            onPress={() => navigation.navigate(productDetails)}
             price={9.9}
             calories={44}
             time={'20'}

@@ -7,4 +7,5 @@ export default {
   fireGray: require('../../assets/images/fireGray.png'),
   bag: require('../../assets/images/bag.png'),
   card: require('../../assets/images/card.png'),
+  pop: require('../../assets/images/pop.png'),
 };

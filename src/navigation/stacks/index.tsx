@@ -10,7 +10,7 @@ import {Home, ProductDetails} from '../../screens/home';
 const Stack = createNativeStackNavigator();
 function Routes() {
   const theme = useTheme();
-  const {onboarding, home, produnctDetails} = stack.stack;
+  const {onboarding, home, productDetails} = stack.stack;
   return (
     <Stack.Navigator
       screenOptions={{
@@ -38,14 +38,7 @@ function Routes() {
         component={OnBoarding}
       />
       <Stack.Screen name={home} component={Home} />
-      <Stack.Screen
-        options={({navigation}) => ({
-          headerShown: true,
-          title: 'Send',
-        })}
-        name={produnctDetails}
-        component={ProductDetails}
-      />
+      <Stack.Screen name={productDetails} component={ProductDetails} />
     </Stack.Navigator>
   );
 }
