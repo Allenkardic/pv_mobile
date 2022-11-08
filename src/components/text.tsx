@@ -149,7 +149,6 @@ export function H5(props: IProps) {
 }
 
 export function H6(props: IProps) {
-  // const { center = true, right = false, left = false, style, children, color, bold, ...restProps } = props;
   const {center, right, left, style, children, color, bold, ...restProps} =
     props;
   const theme = useTheme();

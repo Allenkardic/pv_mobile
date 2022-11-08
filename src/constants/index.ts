@@ -2,12 +2,10 @@ import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
-
 export {default as colors} from './colors';
-
 export {default as layout} from './layout';
 export {default as routes} from './routes';
-
+export {default as images} from './images';
 export {default as spacing} from './spacing';
 export {default as borderRadius} from './borderRadius';
 export {default as fontSize} from './fontSize';

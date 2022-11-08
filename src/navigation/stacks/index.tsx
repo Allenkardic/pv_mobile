@@ -2,6 +2,8 @@ import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {useTheme} from '@react-navigation/native';
 import stack from '../../constants/routes';
+import {colors, images} from '../../constants';
+import {Image} from '../../components';
 import {OnBoarding} from '../../screens/onboarding';
 import {Home, ProductDetails} from '../../screens/home';
 
@@ -14,15 +16,24 @@ function Routes() {
       screenOptions={{
         headerShown: false,
         headerStyle: {
-          backgroundColor: theme.colors.background,
+          backgroundColor: colors.white,
         },
       }}
       initialRouteName={onboarding}>
       <Stack.Screen
-        options={({navigation}) => ({
+        options={{
           headerShown: true,
-          title: 'Onbaording',
-        })}
+          headerStyle: {
+            backgroundColor: colors.black,
+          },
+          headerTitle: props => (
+            <Image
+              source={images.logo}
+              {...props}
+              style={{width: 200, height: 35}}
+            />
+          ),
+        }}
         name={onboarding}
         component={OnBoarding}
       />

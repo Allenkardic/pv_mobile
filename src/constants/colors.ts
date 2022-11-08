@@ -1,13 +1,19 @@
 export default {
   tintColor: '#031a61',
-  white: '#FFFFFF',
-  primary: '#010a43',
-  secondary: '#192259',
+
   tertiary: '#10194e',
   red: '#ff2e63',
   warning: '#fd4a54',
-  black: '#36454f',
-  blue: '#4c5ba9',
+  //
+  primary: '#539f82',
+  secondary: '#111111',
+  black: '#111111',
+  blue: '#0761d5',
+  white: '#FFFFFF',
+  grey: '#f8f8f8',
+  greyDark: '#9e9e9e',
+  greyVariantOne: '#263238',
+  //
   yellow: '#fbad39',
   lightBlue: '#303873',
   blueVariantOne: '#10194e',
@@ -18,5 +24,4 @@ export default {
   green: '#6dbf8f',
   greenVariantOne: '#1ec76c',
   greenVariantTwo: '#1ab768',
-  grey: '#eeeeee',
 };

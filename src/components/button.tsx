@@ -53,7 +53,7 @@ export default function Button(props: IProps) {
             color={alternate ? theme.colors.primary : colors.white}
           />
         ) : (
-          <H4 semiBold color={alternate ? colors.lightBlue : colors.white}>
+          <H4 semiBold color={colors.white}>
             {' '}
             {text}{' '}
           </H4>
@@ -75,19 +75,18 @@ const useStyles = (props: {
   StyleSheet.create({
     container: {paddingTop: 0},
     button: {
-      backgroundColor: props.alternate
-        ? 'transparent'
-        : props.backgroundColor
+      backgroundColor: props.backgroundColor
         ? props.backgroundColor
-        : colors.red,
+        : 'transparent',
       opacity: props.isSubmitting || props.hasError ? 0.7 : 1,
       alignItems: 'center',
-      width: props.short ? '45%' : '100%',
+      width: props.short ? '100%' : '100%',
       borderRadius: borderRadius.medium,
+      borderBottomLeftRadius: props.short ? 0 : borderRadius.medium,
       justifyContent: 'center',
       textAlign: 'center',
       height: 55,
-      borderColor: props.alternate ? colors.lightBlue : 'transparent',
+      borderColor: props.backgroundColor ? 'transparent' : colors.white,
       borderWidth: 1,
       borderStyle: 'solid',
     },

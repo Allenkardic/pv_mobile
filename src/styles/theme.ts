@@ -7,11 +7,11 @@ export const LightTheme = {
   dark: false,
   colors: {
     ...DefaultTheme.colors,
-    text: colors.grey,
-    lightText: colors.lightBlue,
+    text: colors.black,
+    lightText: colors.greyDark,
     primary: colors.primary,
-    background: colors.primary,
-    backgroundAlternate: colors.white,
+    background: colors.white,
+    backgroundAlternate: colors.black,
   },
 };
 
@@ -20,10 +20,10 @@ export const DarkThemeSJ = {
   dark: true,
   colors: {
     ...DarkTheme.colors,
-    text: colors.grey,
-    lightText: colors.lightBlue,
+    text: colors.black,
+    lightText: colors.greyDark,
     primary: colors.primary,
-    background: colors.primary,
+    background: colors.white,
     backgroundAlternate: colors.black,
   },
 };
