@@ -7,7 +7,7 @@ import {
   ImageSourcePropType,
   StyleSheet,
 } from 'react-native';
-import {HP} from '../constants';
+import {HP, colors} from '../constants';
 
 interface IProps extends ImageProps {
   source: ImageSourcePropType;

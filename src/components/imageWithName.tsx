@@ -1,19 +1,25 @@
 import React from 'react';
 import {useTheme} from '@react-navigation/native';
 import {StyleSheet, Pressable} from 'react-native';
-import {colors, spacing} from '../constants';
-import {H4, H5} from './';
-import {Image} from './';
+import {
+  borderRadius,
+  colors,
+  placeholdersImage,
+  spacing,
+  HP,
+  WP,
+} from '../constants';
+import {Image, H6} from './';
 
 interface IProps {
   title: string;
   isSelected: boolean;
   image?: string;
-  onPress?: () => void;
+  onPress: () => void;
 }
 
-const sizeOneImg = 40;
-const sizeTwoImg = 70;
+const imgSize = HP('3.5%');
+
 export default function ImageWithName({
   title,
   image,
@@ -22,23 +28,21 @@ export default function ImageWithName({
 }: IProps) {
   const theme = useTheme();
   const styles = useStyles({theme, isSelected});
+
   return (
     <Pressable onPress={onPress} style={styles.container}>
       <Image
         source={{
-          uri: image
-            ? image
-            : 'https://style.anu.edu.au/_anu/4/images/placeholders/person.png',
+          uri: image ? image : placeholdersImage,
         }}
         style={styles.img}
       />
-      {isSelected ? (
-        <H4 semiBold color={colors.greenVariantTwo} style={styles.titleText}>
-          {title}
-        </H4>
-      ) : (
-        <H5 style={styles.titleText}>{title}</H5>
-      )}
+      <H6
+        color={isSelected ? colors.white : colors.black}
+        semiBold
+        style={styles.titleText}>
+        {title}
+      </H6>
     </Pressable>
   );
 }
@@ -46,15 +50,21 @@ export default function ImageWithName({
 const useStyles = (props: {theme: any; isSelected: boolean}) =>
   StyleSheet.create({
     container: {
-      alignItems: 'center',
+      height: HP('11%'),
+      width: WP('20%'),
+      backgroundColor: props.isSelected ? colors.primary : colors.white,
+      alignSelf: 'flex-start',
+      borderRadius: borderRadius.large,
       justifyContent: 'center',
+      alignItems: 'center',
+      marginRight: spacing.xxsmall,
+      borderColor: colors.greyVariantTwo,
+      borderWidth: 1,
+      borderStyle: 'solid',
     },
     img: {
-      width: props.isSelected ? sizeTwoImg : sizeOneImg,
-      height: props.isSelected ? sizeTwoImg : sizeOneImg,
-      borderRadius: props.isSelected ? sizeTwoImg : sizeOneImg / 2,
-      borderColor: props.isSelected ? colors.greenVariantTwo : colors.white,
-      borderWidth: props.isSelected ? 4 : 2,
+      width: imgSize,
+      height: imgSize,
     },
     titleText: {
       marginTop: spacing.mini,

@@ -20,6 +20,8 @@ export const fontFamily = 'Montserrat-Regular';
 export const fontFamilyLight = 'Montserrat-Light';
 export const fontFamilyBold = 'Montserrat-Bold';
 export const fontFamilySemiBold = 'Montserrat-SemiBold';
+export const placeholdersImage =
+  'https://style.anu.edu.au/_anu/4/images/placeholders/person.png';
 
 export const HP = hp;
 export const WP = wp;

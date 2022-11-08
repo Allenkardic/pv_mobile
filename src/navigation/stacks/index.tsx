@@ -37,14 +37,7 @@ function Routes() {
         name={onboarding}
         component={OnBoarding}
       />
-      <Stack.Screen
-        options={({navigation}) => ({
-          headerShown: true,
-          title: 'Home',
-        })}
-        name={home}
-        component={Home}
-      />
+      <Stack.Screen name={home} component={Home} />
       <Stack.Screen
         options={({navigation}) => ({
           headerShown: true,

@@ -12,3 +12,5 @@ export {default as ActivityLabel} from './activityLabel';
 export {default as EmptyCard} from './emptyCard';
 export {default as Button} from './button';
 export {default as ImageWithName} from './imageWithName';
+export {default as FoodCard} from './foodCard';
+export {default as CurrencyFormat} from './currencyFormat';

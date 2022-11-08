@@ -33,8 +33,10 @@ interface IProps extends TextInputProps {
   iconStyle?: ViewStyle;
   iconColor?: string;
   iconOnPress?: any;
+  filterCount?: number;
 }
 
+const countStyleSize = 12;
 export default function SearchInput(props: IProps) {
   const {
     onChangeText,
@@ -47,8 +49,8 @@ export default function SearchInput(props: IProps) {
     icon = 'search-sharp',
     style,
     iconStyle,
-    iconColor = colors.grey,
     iconOnPress,
+    filterCount,
     note,
     suffix,
     ...others
@@ -65,11 +67,10 @@ export default function SearchInput(props: IProps) {
       }}>
       <View style={styles.searchInputcontainer}>
         <View style={styles.textContainer}>
-          {icon && (
-            <TouchableOpacity style={{...iconStyle}}>
-              <Icon name={icon} color={iconColor} size={20} />
-            </TouchableOpacity>
-          )}
+          <TouchableOpacity style={{...iconStyle}}>
+            <Icon name="search-sharp" color={colors.greyDark} size={25} />
+          </TouchableOpacity>
+
           <RNTextInput
             autoCapitalize="none"
             style={{...styles.textInput}}
@@ -77,14 +78,21 @@ export default function SearchInput(props: IProps) {
             value={value}
             keyboardType={keyboardType || 'default'}
             placeholder={placeholder}
-            placeholderTextColor={colors.grey}
+            placeholderTextColor={colors.greyVariantTwo}
             secureTextEntry={secureTextEntry}
             {...others}
           />
         </View>
       </View>
-      <Pressable onPress={iconOnPress} style={styles.iconContainer}>
-        <Icon name={'filter'} size={30} color={colors.white} />
+      <Pressable onPress={iconOnPress}>
+        <View style={styles.iconContainer}>
+          <Icon name={'filter'} size={30} color={colors.black} />
+        </View>
+        {filterCount && filterCount > 1 && (
+          <View style={styles.filterIconCount}>
+            <H6 color={colors.white}>{filterCount}</H6>
+          </View>
+        )}
       </Pressable>
     </View>
   );
@@ -96,6 +104,11 @@ const useStyles = (props: {appTheme: any}) =>
       flexDirection: 'row',
       justifyContent: 'space-between',
       alignItems: 'center',
+      borderColor: colors.greyVariantTwo,
+      borderWidth: 1,
+      borderStyle: 'solid',
+      borderRadius: borderRadius.medium,
+      paddingRight: spacing.mini,
     },
     searchInputcontainer: {
       paddingVertical: spacing.mini,
@@ -104,10 +117,8 @@ const useStyles = (props: {appTheme: any}) =>
       width: '95%',
       borderRadius: borderRadius.round,
       flexDirection: 'row',
-      backgroundColor: props.appTheme.dark
-        ? colors.greyVariantThree
-        : colors.white,
-      height: 40,
+      backgroundColor: props.appTheme.dark ? colors.greyDark : colors.white,
+      height: 35,
       alignItems: 'center',
       justifyContent: 'center',
       borderColor: props.appTheme.dark ? colors.black : colors.white,
@@ -115,7 +126,7 @@ const useStyles = (props: {appTheme: any}) =>
       borderStyle: 'solid',
     },
     textInput: {
-      color: props.appTheme.dark ? colors.white : colors.alternateBlack,
+      color: props.appTheme.dark ? colors.white : colors.black,
       backgroundColor: 'transparent',
       borderColor: 'transparent',
       borderWidth: 1,
@@ -124,11 +135,24 @@ const useStyles = (props: {appTheme: any}) =>
       width: '85%',
     },
     iconContainer: {
-      backgroundColor: colors.primaryColor,
-      width: 40,
-      height: 40,
+      backgroundColor: 'transparent',
+      width: 30,
+      height: 30,
       alignItems: 'center',
       justifyContent: 'center',
       borderRadius: borderRadius.small,
+    },
+    filterIconCount: {
+      position: 'absolute',
+      top: 5,
+      right: 1,
+      zIndex: 1,
+      elevation: 1,
+      backgroundColor: colors.primary,
+      height: countStyleSize,
+      width: countStyleSize,
+      borderRadius: countStyleSize / 2,
+      justifyContent: 'center',
+      alignItems: 'center',
     },
   });
