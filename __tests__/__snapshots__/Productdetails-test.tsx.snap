@@ -1,0 +1,1218 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductDetails Screen uses props renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#539f82",
+      "flex": 1,
+    }
+  }
+>
+  <RCTScrollView>
+    <View>
+      <View
+        style={
+          Object {
+            "backgroundColor": "#539f82",
+            "height": 267,
+          }
+        }
+      >
+        <RCTSafeAreaView>
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+                "paddingHorizontal": 48,
+              }
+            }
+          >
+            <Text
+              allowFontScaling={false}
+              onPress={[Function]}
+              selectable={false}
+              style={
+                Array [
+                  Object {
+                    "color": "#FFFFFF",
+                    "fontSize": 25,
+                  },
+                  undefined,
+                  Object {
+                    "fontFamily": "Ionicons",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                  Object {},
+                ]
+              }
+            >
+              
+            </Text>
+            <Text
+              allowFontScaling={false}
+              onPress={[Function]}
+              selectable={false}
+              style={
+                Array [
+                  Object {
+                    "color": "#FFFFFF",
+                    "fontSize": 25,
+                  },
+                  undefined,
+                  Object {
+                    "fontFamily": "Ionicons",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                  Object {},
+                ]
+              }
+            >
+              
+            </Text>
+          </View>
+        </RCTSafeAreaView>
+      </View>
+      <View
+        style={
+          Object {
+            "backgroundColor": "#FFFFFF",
+            "borderTopLeftRadius": 30,
+            "borderTopRightRadius": 30,
+            "height": 960.5,
+          }
+        }
+      >
+        <Image
+          source={
+            Object {
+              "uri": undefined,
+            }
+          }
+          style={
+            Array [
+              Object {
+                "borderRadius": 33.25,
+                "height": 66.5,
+                "resizeMode": "contain",
+                "width": 66.5,
+              },
+              Object {
+                "borderRadius": 133.5,
+                "height": 267,
+                "marginLeft": "auto",
+                "marginRight": "auto",
+                "top": -133.5,
+                "width": 267,
+              },
+            ]
+          }
+        />
+        <View
+          style={
+            Object {
+              "top": -40,
+            }
+          }
+        >
+          <Text
+            style={
+              Array [
+                Object {
+                  "color": "rgb(28, 28, 30)",
+                  "fontFamily": "Montserrat-Regular",
+                  "fontSize": 28,
+                },
+                Object {
+                  "fontSize": 28,
+                  "textAlign": "center",
+                },
+                undefined,
+                Object {
+                  "fontFamily": "Montserrat-Bold",
+                },
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+              ]
+            }
+          />
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "marginLeft": "auto",
+                "marginRight": "auto",
+                "marginVertical": 24,
+              }
+            }
+          >
+            <Image
+              source={
+                Object {
+                  "testUri": "../../../assets/images/pop.png",
+                }
+              }
+              style={
+                Array [
+                  Object {
+                    "borderRadius": 33.25,
+                    "height": 66.5,
+                    "resizeMode": "contain",
+                    "width": 66.5,
+                  },
+                  Object {
+                    "height": 20,
+                    "marginRight": 12,
+                    "width": 20,
+                  },
+                ]
+              }
+            />
+            <Text
+              style={
+                Array [
+                  Object {
+                    "color": "rgb(28, 28, 30)",
+                    "fontFamily": "Montserrat-Regular",
+                    "fontSize": 28,
+                  },
+                  Object {
+                    "fontSize": 22,
+                    "textAlign": "left",
+                  },
+                  Object {
+                    "color": "#263238",
+                  },
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                ]
+              }
+            >
+              Pizza Italiano
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "marginLeft": "auto",
+                "marginRight": "auto",
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "flexDirection": "row",
+                  "marginLeft": 4,
+                }
+              }
+            >
+              <Text
+                allowFontScaling={false}
+                selectable={false}
+                style={
+                  Array [
+                    Object {
+                      "color": "#111111",
+                      "fontSize": 18,
+                    },
+                    undefined,
+                    Object {
+                      "fontFamily": "Ionicons",
+                      "fontStyle": "normal",
+                      "fontWeight": "normal",
+                    },
+                    Object {},
+                  ]
+                }
+              >
+                
+              </Text>
+              <Text
+                style={
+                  Array [
+                    Object {
+                      "color": "rgb(28, 28, 30)",
+                      "fontFamily": "Montserrat-Regular",
+                      "fontSize": 28,
+                    },
+                    Object {
+                      "fontSize": 25,
+                      "marginHorizontal": 8,
+                      "textAlign": "left",
+                    },
+                    undefined,
+                    undefined,
+                    undefined,
+                    undefined,
+                    undefined,
+                    undefined,
+                  ]
+                }
+              >
+                15
+              </Text>
+              <Text
+                style={
+                  Array [
+                    Object {
+                      "color": "rgb(28, 28, 30)",
+                      "fontFamily": "Montserrat-Regular",
+                      "fontSize": 28,
+                    },
+                    Object {
+                      "fontSize": 22,
+                      "textAlign": "left",
+                    },
+                    undefined,
+                    undefined,
+                    undefined,
+                    undefined,
+                    undefined,
+                    undefined,
+                  ]
+                }
+              >
+                min
+              </Text>
+            </View>
+            <View
+              style={
+                Object {
+                  "backgroundColor": "#808080",
+                  "height": 1.5,
+                  "marginHorizontal": 24,
+                  "width": 1.5,
+                }
+              }
+            />
+            <Text
+              allowFontScaling={false}
+              selectable={false}
+              style={
+                Array [
+                  Object {
+                    "color": "#fbad39",
+                    "fontSize": 18,
+                  },
+                  undefined,
+                  Object {
+                    "fontFamily": "Ionicons",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                  Object {},
+                ]
+              }
+            >
+              
+            </Text>
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "flexDirection": "row",
+                }
+              }
+            >
+              <Text
+                style={
+                  Array [
+                    Object {
+                      "color": "rgb(28, 28, 30)",
+                      "fontFamily": "Montserrat-Regular",
+                      "fontSize": 28,
+                    },
+                    Object {
+                      "fontSize": 22,
+                      "marginLeft": 12,
+                      "marginRight": 8,
+                      "textAlign": "left",
+                    },
+                    Object {
+                      "color": "#111111",
+                    },
+                    Object {
+                      "fontFamily": "Montserrat-Bold",
+                    },
+                    undefined,
+                    undefined,
+                    undefined,
+                    undefined,
+                  ]
+                }
+              >
+                4.0
+              </Text>
+              <Text
+                style={
+                  Array [
+                    Object {
+                      "color": "rgb(28, 28, 30)",
+                      "fontFamily": "Montserrat-Regular",
+                      "fontSize": 28,
+                    },
+                    Object {
+                      "fontSize": 22,
+                      "textAlign": "left",
+                    },
+                    Object {
+                      "color": "#263238",
+                    },
+                    undefined,
+                    undefined,
+                    undefined,
+                    undefined,
+                    undefined,
+                  ]
+                }
+              >
+                (2.2k review)
+              </Text>
+              <Text
+                allowFontScaling={false}
+                selectable={false}
+                style={
+                  Array [
+                    Object {
+                      "color": "#d5d8d9",
+                      "fontSize": 15,
+                    },
+                    Object {
+                      "marginLeft": 3,
+                    },
+                    Object {
+                      "fontFamily": "Ionicons",
+                      "fontStyle": "normal",
+                      "fontWeight": "normal",
+                    },
+                    Object {},
+                  ]
+                }
+              >
+                
+              </Text>
+            </View>
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "justifyContent": "center",
+            }
+          }
+        >
+          <View
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "alignItems": "center",
+                "alignSelf": "flex-start",
+                "backgroundColor": "#FFFFFF",
+                "borderColor": "#539f82",
+                "borderRadius": 30,
+                "borderStyle": "solid",
+                "borderWidth": 1,
+                "height": 173.5,
+                "justifyContent": "center",
+                "marginRight": 24,
+                "width": 165,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "borderColor": "#539f82",
+                  "borderRadius": 13.25,
+                  "borderStyle": "solid",
+                  "borderWidth": 6,
+                  "height": 26.5,
+                  "width": 26.5,
+                }
+              }
+            />
+            <Text
+              style={
+                Array [
+                  Object {
+                    "color": "rgb(28, 28, 30)",
+                    "fontFamily": "Montserrat-Regular",
+                    "fontSize": 28,
+                  },
+                  Object {
+                    "fontSize": 22,
+                    "marginBottom": 8,
+                    "marginTop": 24,
+                    "textAlign": "left",
+                  },
+                  Object {
+                    "color": "#808080",
+                  },
+                  undefined,
+                  Object {
+                    "fontFamily": "Montserrat-SemiBold",
+                  },
+                  undefined,
+                  undefined,
+                  undefined,
+                ]
+              }
+            >
+              Small 8*
+            </Text>
+            <View
+              style={
+                Array [
+                  Object {
+                    "alignItems": "center",
+                    "flexDirection": "row",
+                  },
+                  Object {},
+                ]
+              }
+            >
+              <Text
+                style={
+                  Array [
+                    Object {
+                      "color": "rgb(28, 28, 30)",
+                      "fontFamily": "Montserrat-Regular",
+                      "fontSize": 28,
+                    },
+                    Object {
+                      "fontSize": 25,
+                      "marginRight": 1,
+                      "textAlign": "left",
+                    },
+                    Object {
+                      "color": "#111111",
+                    },
+                    undefined,
+                    Object {
+                      "fontFamily": "Montserrat-SemiBold",
+                    },
+                    undefined,
+                    undefined,
+                    undefined,
+                  ]
+                }
+              >
+                $
+              </Text>
+              <Text
+                style={
+                  Array [
+                    Object {
+                      "color": "rgb(28, 28, 30)",
+                      "fontFamily": "Montserrat-Regular",
+                      "fontSize": 28,
+                    },
+                    Object {
+                      "fontSize": 25,
+                      "textAlign": "center",
+                    },
+                    undefined,
+                    undefined,
+                    Object {
+                      "fontFamily": "Montserrat-SemiBold",
+                    },
+                    undefined,
+                    undefined,
+                    undefined,
+                  ]
+                }
+              >
+                10
+              </Text>
+            </View>
+          </View>
+          <View
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "alignItems": "center",
+                "alignSelf": "flex-start",
+                "backgroundColor": "#FFFFFF",
+                "borderColor": "#d5d8d9",
+                "borderRadius": 30,
+                "borderStyle": "solid",
+                "borderWidth": 1,
+                "height": 173.5,
+                "justifyContent": "center",
+                "marginRight": 24,
+                "width": 165,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "borderColor": "#d5d8d9",
+                  "borderRadius": 13.25,
+                  "borderStyle": "solid",
+                  "borderWidth": 1,
+                  "height": 26.5,
+                  "width": 26.5,
+                }
+              }
+            />
+            <Text
+              style={
+                Array [
+                  Object {
+                    "color": "rgb(28, 28, 30)",
+                    "fontFamily": "Montserrat-Regular",
+                    "fontSize": 28,
+                  },
+                  Object {
+                    "fontSize": 22,
+                    "marginBottom": 8,
+                    "marginTop": 24,
+                    "textAlign": "left",
+                  },
+                  Object {
+                    "color": "#808080",
+                  },
+                  undefined,
+                  Object {
+                    "fontFamily": "Montserrat-SemiBold",
+                  },
+                  undefined,
+                  undefined,
+                  undefined,
+                ]
+              }
+            >
+              Medium 12*
+            </Text>
+            <View
+              style={
+                Array [
+                  Object {
+                    "alignItems": "center",
+                    "flexDirection": "row",
+                  },
+                  Object {},
+                ]
+              }
+            >
+              <Text
+                style={
+                  Array [
+                    Object {
+                      "color": "rgb(28, 28, 30)",
+                      "fontFamily": "Montserrat-Regular",
+                      "fontSize": 28,
+                    },
+                    Object {
+                      "fontSize": 25,
+                      "marginRight": 1,
+                      "textAlign": "left",
+                    },
+                    Object {
+                      "color": "#111111",
+                    },
+                    undefined,
+                    Object {
+                      "fontFamily": "Montserrat-SemiBold",
+                    },
+                    undefined,
+                    undefined,
+                    undefined,
+                  ]
+                }
+              >
+                $
+              </Text>
+              <Text
+                style={
+                  Array [
+                    Object {
+                      "color": "rgb(28, 28, 30)",
+                      "fontFamily": "Montserrat-Regular",
+                      "fontSize": 28,
+                    },
+                    Object {
+                      "fontSize": 25,
+                      "textAlign": "center",
+                    },
+                    undefined,
+                    undefined,
+                    Object {
+                      "fontFamily": "Montserrat-SemiBold",
+                    },
+                    undefined,
+                    undefined,
+                    undefined,
+                  ]
+                }
+              >
+                13
+              </Text>
+            </View>
+          </View>
+          <View
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "alignItems": "center",
+                "alignSelf": "flex-start",
+                "backgroundColor": "#FFFFFF",
+                "borderColor": "#d5d8d9",
+                "borderRadius": 30,
+                "borderStyle": "solid",
+                "borderWidth": 1,
+                "height": 173.5,
+                "justifyContent": "center",
+                "marginRight": 24,
+                "width": 165,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "borderColor": "#d5d8d9",
+                  "borderRadius": 13.25,
+                  "borderStyle": "solid",
+                  "borderWidth": 1,
+                  "height": 26.5,
+                  "width": 26.5,
+                }
+              }
+            />
+            <Text
+              style={
+                Array [
+                  Object {
+                    "color": "rgb(28, 28, 30)",
+                    "fontFamily": "Montserrat-Regular",
+                    "fontSize": 28,
+                  },
+                  Object {
+                    "fontSize": 22,
+                    "marginBottom": 8,
+                    "marginTop": 24,
+                    "textAlign": "left",
+                  },
+                  Object {
+                    "color": "#808080",
+                  },
+                  undefined,
+                  Object {
+                    "fontFamily": "Montserrat-SemiBold",
+                  },
+                  undefined,
+                  undefined,
+                  undefined,
+                ]
+              }
+            >
+              Large 18*
+            </Text>
+            <View
+              style={
+                Array [
+                  Object {
+                    "alignItems": "center",
+                    "flexDirection": "row",
+                  },
+                  Object {},
+                ]
+              }
+            >
+              <Text
+                style={
+                  Array [
+                    Object {
+                      "color": "rgb(28, 28, 30)",
+                      "fontFamily": "Montserrat-Regular",
+                      "fontSize": 28,
+                    },
+                    Object {
+                      "fontSize": 25,
+                      "marginRight": 1,
+                      "textAlign": "left",
+                    },
+                    Object {
+                      "color": "#111111",
+                    },
+                    undefined,
+                    Object {
+                      "fontFamily": "Montserrat-SemiBold",
+                    },
+                    undefined,
+                    undefined,
+                    undefined,
+                  ]
+                }
+              >
+                $
+              </Text>
+              <Text
+                style={
+                  Array [
+                    Object {
+                      "color": "rgb(28, 28, 30)",
+                      "fontFamily": "Montserrat-Regular",
+                      "fontSize": 28,
+                    },
+                    Object {
+                      "fontSize": 25,
+                      "textAlign": "center",
+                    },
+                    undefined,
+                    undefined,
+                    Object {
+                      "fontFamily": "Montserrat-SemiBold",
+                    },
+                    undefined,
+                    undefined,
+                    undefined,
+                  ]
+                }
+              >
+                17
+              </Text>
+            </View>
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "marginTop": 48,
+              "paddingHorizontal": 24,
+            }
+          }
+        >
+          <Text
+            style={
+              Array [
+                Object {
+                  "color": "rgb(28, 28, 30)",
+                  "fontFamily": "Montserrat-Regular",
+                  "fontSize": 28,
+                },
+                Object {
+                  "fontSize": 25,
+                  "lineHeight": 25,
+                  "textAlign": "center",
+                },
+                Object {
+                  "color": "#808080",
+                },
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+              ]
+            }
+          >
+            undefined
+            <Text
+              style={
+                Array [
+                  Object {
+                    "color": "rgb(28, 28, 30)",
+                    "fontFamily": "Montserrat-Regular",
+                    "fontSize": 28,
+                  },
+                  Object {
+                    "fontSize": 25,
+                    "textAlign": "left",
+                  },
+                  Object {
+                    "color": "#539f82",
+                  },
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                ]
+              }
+            >
+              More
+            </Text>
+          </Text>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+  <View
+    style={
+      Object {
+        "backgroundColor": "#FFFFFF",
+        "paddingBottom": 48,
+        "paddingHorizontal": 24,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+          },
+          Object {
+            "marginBottom": 48,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+          }
+        }
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "rgb(28, 28, 30)",
+                "fontFamily": "Montserrat-Regular",
+                "fontSize": 28,
+              },
+              Object {
+                "fontSize": 25,
+                "textAlign": "left",
+              },
+              undefined,
+              undefined,
+              Object {
+                "fontFamily": "Montserrat-SemiBold",
+              },
+              undefined,
+              undefined,
+              undefined,
+            ]
+          }
+        >
+          Total: 
+        </Text>
+        <View
+          style={
+            Array [
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+              },
+              Object {},
+            ]
+          }
+        >
+          <Text
+            style={
+              Array [
+                Object {
+                  "color": "rgb(28, 28, 30)",
+                  "fontFamily": "Montserrat-Regular",
+                  "fontSize": 28,
+                },
+                Object {
+                  "fontSize": 25,
+                  "marginRight": 1,
+                  "textAlign": "left",
+                },
+                Object {
+                  "color": "#539f82",
+                },
+                undefined,
+                Object {
+                  "fontFamily": "Montserrat-SemiBold",
+                },
+                undefined,
+                undefined,
+                undefined,
+              ]
+            }
+          >
+            $
+          </Text>
+          <Text
+            style={
+              Array [
+                Object {
+                  "color": "rgb(28, 28, 30)",
+                  "fontFamily": "Montserrat-Regular",
+                  "fontSize": 28,
+                },
+                Object {
+                  "fontSize": 25,
+                  "textAlign": "center",
+                },
+                undefined,
+                undefined,
+                Object {
+                  "fontFamily": "Montserrat-SemiBold",
+                },
+                undefined,
+                undefined,
+                undefined,
+              ]
+            }
+          >
+            10
+          </Text>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+            "width": "22%",
+          }
+        }
+      >
+        <View
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "alignItems": "center",
+              "borderColor": "#d5d8d9",
+              "borderRadius": 10,
+              "borderStyle": "solid",
+              "borderWidth": 1,
+              "height": 22,
+              "justifyContent": "center",
+              "width": 22,
+            }
+          }
+        >
+          <Text
+            allowFontScaling={false}
+            selectable={false}
+            style={
+              Array [
+                Object {
+                  "color": "#808080",
+                  "fontSize": 15,
+                },
+                undefined,
+                Object {
+                  "fontFamily": "Ionicons",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+                Object {},
+              ]
+            }
+          >
+            
+          </Text>
+        </View>
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "rgb(28, 28, 30)",
+                "fontFamily": "Montserrat-Regular",
+                "fontSize": 28,
+              },
+              Object {
+                "fontSize": 25,
+                "textAlign": "left",
+              },
+              undefined,
+              undefined,
+              undefined,
+              undefined,
+              undefined,
+              undefined,
+            ]
+          }
+        >
+          1
+        </Text>
+        <View
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "alignItems": "center",
+              "borderColor": "#d5d8d9",
+              "borderRadius": 10,
+              "borderStyle": "solid",
+              "borderWidth": 1,
+              "height": 22,
+              "justifyContent": "center",
+              "width": 22,
+            }
+          }
+        >
+          <Text
+            allowFontScaling={false}
+            selectable={false}
+            style={
+              Array [
+                Object {
+                  "color": "#808080",
+                  "fontSize": 15,
+                },
+                undefined,
+                Object {
+                  "fontFamily": "Ionicons",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+                Object {},
+              ]
+            }
+          >
+            
+          </Text>
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "paddingTop": 0,
+        }
+      }
+    >
+      <View
+        accessibilityState={
+          Object {
+            "disabled": false,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#539f82",
+            "borderBottomLeftRadius": 20,
+            "borderColor": "transparent",
+            "borderRadius": 20,
+            "borderStyle": "solid",
+            "borderWidth": 1,
+            "height": 55,
+            "justifyContent": "center",
+            "opacity": 1,
+            "textAlign": "center",
+            "width": "100%",
+          }
+        }
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "rgb(28, 28, 30)",
+                "fontFamily": "Montserrat-Regular",
+                "fontSize": 28,
+              },
+              Object {
+                "fontSize": 28,
+                "textAlign": "left",
+              },
+              Object {
+                "color": "#FFFFFF",
+              },
+              undefined,
+              Object {
+                "fontFamily": "Montserrat-SemiBold",
+              },
+              undefined,
+              undefined,
+              undefined,
+            ]
+          }
+        >
+           
+          Next
+           
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;

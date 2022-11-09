@@ -1,0 +1,782 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home Screen uses props renders correctly 1`] = `
+Array [
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <RCTSafeAreaView>
+      <View
+        style={
+          Object {
+            "marginHorizontal": 24,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+            }
+          }
+        >
+          <Text
+            style={
+              Array [
+                Object {
+                  "color": "rgb(28, 28, 30)",
+                  "fontFamily": "Montserrat-Regular",
+                  "fontSize": 28,
+                },
+                Object {
+                  "fontSize": 25,
+                  "textAlign": "left",
+                },
+                Object {
+                  "color": "#263238",
+                },
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+              ]
+            }
+          >
+            Hi 
+            Aliakwe
+          </Text>
+          <Image
+            source={
+              Object {
+                "uri": "https://style.anu.edu.au/_anu/4/images/placeholders/person.png",
+              }
+            }
+            style={
+              Array [
+                Object {
+                  "borderRadius": 23.25,
+                  "height": 46.5,
+                  "resizeMode": "contain",
+                  "width": 46.5,
+                },
+                Object {
+                  "backgroundColor": "#808080",
+                },
+              ]
+            }
+          />
+        </View>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+            }
+          }
+        >
+          <Text
+            style={
+              Array [
+                Object {
+                  "color": "rgb(28, 28, 30)",
+                  "fontFamily": "Montserrat-Regular",
+                  "fontSize": 28,
+                },
+                Object {
+                  "fontSize": 31,
+                  "textAlign": "left",
+                },
+                undefined,
+                undefined,
+                Object {
+                  "fontFamily": "Montserrat-SemiBold",
+                },
+                undefined,
+                undefined,
+                undefined,
+              ]
+            }
+          >
+            Hungry Now?
+          </Text>
+          <Image
+            source={
+              Object {
+                "testUri": "../../../assets/images/fire.png",
+              }
+            }
+            style={
+              Array [
+                Object {
+                  "borderRadius": 20,
+                  "height": 40,
+                  "resizeMode": "contain",
+                  "width": 40,
+                },
+                Object {},
+              ]
+            }
+          />
+        </View>
+      </View>
+    </RCTSafeAreaView>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "borderColor": "#d5d8d9",
+          "borderRadius": 20,
+          "borderStyle": "solid",
+          "borderWidth": 1,
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+          "marginBottom": 48,
+          "marginHorizontal": 24,
+          "marginTop": 48,
+          "paddingRight": 8,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "paddingVertical": 8,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#FFFFFF",
+              "borderColor": "#FFFFFF",
+              "borderRadius": 100,
+              "borderStyle": "solid",
+              "borderWidth": 1,
+              "flexDirection": "row",
+              "height": 35,
+              "justifyContent": "center",
+              "width": "95%",
+            }
+          }
+        >
+          <View
+            accessible={true}
+            collapsable={false}
+            focusable={false}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            <Text
+              allowFontScaling={false}
+              selectable={false}
+              style={
+                Array [
+                  Object {
+                    "color": "#808080",
+                    "fontSize": 25,
+                  },
+                  undefined,
+                  Object {
+                    "fontFamily": "Ionicons",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                  Object {},
+                ]
+              }
+            >
+              
+            </Text>
+          </View>
+          <TextInput
+            autoCapitalize="none"
+            keyboardType="default"
+            onChangeText={[Function]}
+            placeholder="search.."
+            placeholderTextColor="#d5d8d9"
+            style={
+              Object {
+                "backgroundColor": "transparent",
+                "borderColor": "transparent",
+                "borderStyle": "solid",
+                "borderWidth": 1,
+                "color": "#111111",
+                "height": "100%",
+                "width": "85%",
+              }
+            }
+            value=""
+          />
+        </View>
+      </View>
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "transparent",
+              "borderRadius": 10,
+              "height": 30,
+              "justifyContent": "center",
+              "width": 30,
+            }
+          }
+        >
+          <Text
+            allowFontScaling={false}
+            selectable={false}
+            style={
+              Array [
+                Object {
+                  "color": "#111111",
+                  "fontSize": 30,
+                },
+                undefined,
+                Object {
+                  "fontFamily": "Ionicons",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+                Object {},
+              ]
+            }
+          >
+            
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#539f82",
+              "borderRadius": 6,
+              "elevation": 1,
+              "height": 12,
+              "justifyContent": "center",
+              "position": "absolute",
+              "right": 1,
+              "top": 5,
+              "width": 12,
+              "zIndex": 1,
+            }
+          }
+        >
+          <Text
+            style={
+              Array [
+                Object {
+                  "color": "rgb(28, 28, 30)",
+                  "fontFamily": "Montserrat-Regular",
+                  "fontSize": 28,
+                },
+                Object {
+                  "fontSize": 22,
+                  "textAlign": "left",
+                },
+                Object {
+                  "color": "#FFFFFF",
+                },
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+              ]
+            }
+          >
+            2
+          </Text>
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "marginLeft": 24,
+        }
+      }
+    >
+      <RCTScrollView
+        CellRendererComponent={[Function]}
+        ListEmptyComponent={
+          <EmptyList
+            subTitle="There are no meals found"
+          />
+        }
+        ListHeaderComponent={
+          <View
+            style={
+              Object {
+                "height": 10,
+              }
+            }
+          />
+        }
+        animatedStyle={
+          Object {
+            "value": Object {},
+          }
+        }
+        collapsable={false}
+        data={Array []}
+        entering={
+          FadeIn {
+            "build": [Function],
+            "durationV": 300,
+            "randomizeDelay": false,
+          }
+        }
+        getItem={[Function]}
+        getItemCount={[Function]}
+        horizontal={true}
+        keyExtractor={[Function]}
+        onContentSizeChange={[Function]}
+        onEndReached={[Function]}
+        onLayout={[Function]}
+        onMomentumScrollBegin={[Function]}
+        onMomentumScrollEnd={[Function]}
+        onScroll={[Function]}
+        onScrollBeginDrag={[Function]}
+        onScrollEndDrag={[Function]}
+        refreshing={false}
+        removeClippedSubviews={false}
+        renderItem={[Function]}
+        scrollEventThrottle={50}
+        showsVerticalScrollIndicator={false}
+        stickyHeaderIndices={Array []}
+        style={
+          Object {
+            "backgroundColor": "rgb(242, 242, 242)",
+          }
+        }
+        viewabilityConfigCallbackPairs={Array []}
+      >
+        <View>
+          <View
+            onLayout={[Function]}
+          >
+            <View
+              style={
+                Object {
+                  "height": 10,
+                }
+              }
+            />
+          </View>
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "flexDirection": "column",
+                "justifyContent": "center",
+                "marginTop": 240,
+              }
+            }
+          >
+            <Text
+              allowFontScaling={false}
+              selectable={false}
+              style={
+                Array [
+                  Object {
+                    "color": "#f5f5f5",
+                    "fontSize": 267,
+                  },
+                  undefined,
+                  Object {
+                    "fontFamily": "Ionicons",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                  Object {},
+                ]
+              }
+            >
+              
+            </Text>
+            <View
+              style={
+                Object {
+                  "marginTop": 48,
+                  "paddingHorizontal": 192,
+                }
+              }
+            >
+              <Text
+                style={
+                  Array [
+                    Object {
+                      "color": "rgb(28, 28, 30)",
+                      "fontFamily": "Montserrat-Regular",
+                      "fontSize": 28,
+                    },
+                    Object {
+                      "fontSize": 22,
+                      "textAlign": "center",
+                    },
+                    undefined,
+                    undefined,
+                    undefined,
+                    undefined,
+                    undefined,
+                    undefined,
+                  ]
+                }
+              >
+                There are no meals found
+              </Text>
+            </View>
+          </View>
+        </View>
+      </RCTScrollView>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+          "marginBottom": 24,
+          "marginTop": 48,
+          "paddingHorizontal": 24,
+        }
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "rgb(28, 28, 30)",
+              "fontFamily": "Montserrat-Regular",
+              "fontSize": 28,
+            },
+            Object {
+              "fontSize": 28,
+              "textAlign": "left",
+            },
+            undefined,
+            Object {
+              "fontFamily": "Montserrat-Bold",
+            },
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+          ]
+        }
+      >
+        Popular items
+      </Text>
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "rgb(28, 28, 30)",
+              "fontFamily": "Montserrat-Regular",
+              "fontSize": 28,
+            },
+            Object {
+              "fontSize": 22,
+              "textAlign": "left",
+            },
+            Object {
+              "color": "#808080",
+            },
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+          ]
+        }
+      >
+        See All
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "marginLeft": 24,
+        }
+      }
+    >
+      <RCTScrollView
+        CellRendererComponent={[Function]}
+        ListEmptyComponent={
+          <EmptyList
+            subTitle="There are no categories found"
+          />
+        }
+        ListHeaderComponent={
+          <View
+            style={
+              Object {
+                "height": 10,
+              }
+            }
+          />
+        }
+        animatedStyle={
+          Object {
+            "value": Object {},
+          }
+        }
+        collapsable={false}
+        data={Array []}
+        entering={
+          FadeIn {
+            "build": [Function],
+            "durationV": 300,
+            "randomizeDelay": false,
+          }
+        }
+        getItem={[Function]}
+        getItemCount={[Function]}
+        horizontal={true}
+        keyExtractor={[Function]}
+        onContentSizeChange={[Function]}
+        onEndReached={[Function]}
+        onLayout={[Function]}
+        onMomentumScrollBegin={[Function]}
+        onMomentumScrollEnd={[Function]}
+        onScroll={[Function]}
+        onScrollBeginDrag={[Function]}
+        onScrollEndDrag={[Function]}
+        refreshing={false}
+        removeClippedSubviews={false}
+        renderItem={[Function]}
+        scrollEventThrottle={50}
+        showsVerticalScrollIndicator={false}
+        stickyHeaderIndices={Array []}
+        style={
+          Object {
+            "backgroundColor": "rgb(242, 242, 242)",
+          }
+        }
+        viewabilityConfigCallbackPairs={Array []}
+      >
+        <View>
+          <View
+            onLayout={[Function]}
+          >
+            <View
+              style={
+                Object {
+                  "height": 10,
+                }
+              }
+            />
+          </View>
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "flexDirection": "column",
+                "justifyContent": "center",
+                "marginTop": 240,
+              }
+            }
+          >
+            <Text
+              allowFontScaling={false}
+              selectable={false}
+              style={
+                Array [
+                  Object {
+                    "color": "#f5f5f5",
+                    "fontSize": 267,
+                  },
+                  undefined,
+                  Object {
+                    "fontFamily": "Ionicons",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                  Object {},
+                ]
+              }
+            >
+              
+            </Text>
+            <View
+              style={
+                Object {
+                  "marginTop": 48,
+                  "paddingHorizontal": 192,
+                }
+              }
+            >
+              <Text
+                style={
+                  Array [
+                    Object {
+                      "color": "rgb(28, 28, 30)",
+                      "fontFamily": "Montserrat-Regular",
+                      "fontSize": 28,
+                    },
+                    Object {
+                      "fontSize": 22,
+                      "textAlign": "center",
+                    },
+                    undefined,
+                    undefined,
+                    undefined,
+                    undefined,
+                    undefined,
+                    undefined,
+                  ]
+                }
+              >
+                There are no categories found
+              </Text>
+            </View>
+          </View>
+        </View>
+      </RCTScrollView>
+    </View>
+  </View>,
+  <View
+    style={
+      Object {
+        "marginBottom": 48,
+      }
+    }
+  >
+    <View
+      accessibilityIgnoresInvertColors={true}
+    >
+      <Image
+        source={
+          Object {
+            "testUri": "../../../assets/images/card.png",
+          }
+        }
+        style={
+          Array [
+            Object {
+              "bottom": 0,
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            },
+            Object {
+              "height": undefined,
+              "width": undefined,
+            },
+            Object {
+              "marginHorizontal": 24,
+              "resizeMode": "stretch",
+            },
+          ]
+        }
+      />
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+            "paddingHorizontal": 64,
+            "paddingVertical": 48,
+          }
+        }
+      >
+        <View>
+          <Text
+            style={
+              Array [
+                Object {
+                  "color": "rgb(28, 28, 30)",
+                  "fontFamily": "Montserrat-Regular",
+                  "fontSize": 28,
+                },
+                Object {
+                  "fontSize": 28,
+                  "marginBottom": 8,
+                  "textAlign": "left",
+                },
+                Object {
+                  "color": "#FFFFFF",
+                },
+                undefined,
+                Object {
+                  "fontFamily": "Montserrat-SemiBold",
+                },
+                undefined,
+                undefined,
+                undefined,
+              ]
+            }
+          >
+            Cart
+          </Text>
+          <Text
+            style={
+              Array [
+                Object {
+                  "color": "rgb(28, 28, 30)",
+                  "fontFamily": "Montserrat-Regular",
+                  "fontSize": 28,
+                },
+                Object {
+                  "fontSize": 22,
+                  "textAlign": "left",
+                },
+                Object {
+                  "color": "#FFFFFF",
+                },
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+              ]
+            }
+          >
+            undefined Items
+          </Text>
+        </View>
+        <View>
+          <RCTScrollView
+            horizontal={true}
+          >
+            <View />
+          </RCTScrollView>
+        </View>
+      </View>
+    </View>
+  </View>,
+]
+`;

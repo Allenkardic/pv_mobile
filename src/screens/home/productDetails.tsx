@@ -29,11 +29,9 @@ const imgSize = HP('20%');
 function ProductDetails({navigation, route}: IProps) {
   const dispatch = useAppDispatch();
   const cartList = useAppSelector(state => state.carts.data);
-  const {strCategory, strCategoryDescription, strCategoryThumb} =
-    route.params.item;
 
-  const itemToAddOrDelete = route.params.item;
-  const itemExists = cartList.includes(itemToAddOrDelete);
+  const itemToAddOrDelete = route?.params?.item;
+  const itemExists = cartList?.includes(itemToAddOrDelete);
   const [sizesList, setSizesList] = useState([
     {title: `Small 8*`, price: 9.99, isSelected: true},
     {title: `Medium 12*`, price: 12.99, isSelected: false},
@@ -84,8 +82,11 @@ function ProductDetails({navigation, route}: IProps) {
           />
         </View>
         <View style={styles.contentTwo}>
-          <Image source={{uri: strCategoryThumb}} style={styles.imgStyle} />
-          <ProductReview name={strCategory} />
+          <Image
+            source={{uri: route?.params?.item?.strCategoryThumb}}
+            style={styles.imgStyle}
+          />
+          <ProductReview name={route?.params?.item?.strCategory} />
           <View style={styles.sizeListContainer}>
             {sizesList.map((item, index) => (
               <ProductTypeCard
@@ -100,7 +101,7 @@ function ProductDetails({navigation, route}: IProps) {
 
           <View style={styles.helperTextContainer}>
             <H5 center color={colors.greyDark} style={styles.helperText}>
-              {ellipsis(strCategoryDescription, 170)}
+              {ellipsis(route?.params?.item?.strCategoryDescription, 170)}
               <H5 color={colors.primary}>More</H5>
             </H5>
           </View>

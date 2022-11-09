@@ -23,13 +23,13 @@ export default function CartCard({data}: Props) {
             style={{marginBottom: spacing.mini}}>
             Cart
           </H4>
-          <H6 color={colors.white}>{`${data.length} ${
-            data.length <= 1 ? 'Item' : 'Items'
+          <H6 color={colors.white}>{`${data?.length} ${
+            data?.length <= 1 ? 'Item' : 'Items'
           }`}</H6>
         </View>
         <View>
           <ScrollView horizontal={true}>
-            {data.map((item: any, index: string) => (
+            {data?.map((item: any, index: string) => (
               <View
                 key={index}
                 style={{
@@ -39,7 +39,7 @@ export default function CartCard({data}: Props) {
                   backgroundColor: colors.white,
                   justifyContent: 'center',
                   alignItems: 'center',
-                  marginRight: data.length === index + 1 ? 0 : spacing.mini,
+                  marginRight: data?.length === index + 1 ? 0 : spacing.mini,
                 }}>
                 <Image
                   source={{uri: item.strCategoryThumb}}
