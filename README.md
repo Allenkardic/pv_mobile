@@ -42,8 +42,3 @@ IOS SCREENSHOTS
 <br>
 ![](screenshots/ios-product-details.png)
 <br>
-
-ANDROID SCREENSHOTS
-![](screenshots/android-home.png)
-<br>
-![](screenshots/android-product-details.png)
