@@ -35,10 +35,8 @@ Product Details screen
 .User can click on item sizes and increment or decrement the product count
 
 <br>
-IOS SCREENSHOTS
-![](screenshots/ios-onboard.png)
+
+SCREENSHOTS
+![](screenshots/android-home.png)
 <br>
-![](screenshots/ios-home.png)
-<br>
-![](screenshots/ios-product-details.png)
-<br>
+![](screenshots/android-product-details.png)
