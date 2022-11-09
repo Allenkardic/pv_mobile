@@ -7,6 +7,7 @@ import {
   Image,
   NavigationHeader,
   ProductTypeCard,
+  FocusAwareStatusBar,
 } from '../../components';
 import {ProductReview, PriceCounter} from '../../partials';
 import {
@@ -72,6 +73,10 @@ function ProductDetails({navigation, route}: IProps) {
     <View style={styles.container}>
       <ScrollView>
         <View style={styles.contentOne}>
+          <FocusAwareStatusBar
+            barStyle="light-content"
+            backgroundColor={colors.primary}
+          />
           <NavigationHeader
             onPressLeftIcon={() => navigation.goBack()}
             onPressRightIcon={handleAddOrRemoveCart}

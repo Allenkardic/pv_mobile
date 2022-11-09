@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {View, StyleSheet, SafeAreaView, Alert} from 'react-native';
+import {View, StyleSheet, SafeAreaView} from 'react-native';
 import {NavigationProp, ParamListBase} from '@react-navigation/native';
 import {
   H4,
@@ -8,6 +8,7 @@ import {
   ImageWithName,
   FoodCard,
   FlatList,
+  FocusAwareStatusBar,
 } from '../../components';
 import {
   colors,
@@ -121,6 +122,10 @@ function Home({navigation}: IProps) {
     <>
       <View style={styles.container}>
         <SafeAreaView>
+          <FocusAwareStatusBar
+            barStyle="dark-content"
+            backgroundColor={colors.white}
+          />
           <HomeHeader
             name="Aliakwe"
             image={placeholdersImage}

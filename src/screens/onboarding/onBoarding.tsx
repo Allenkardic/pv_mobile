@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, StyleSheet} from 'react-native';
 import {NavigationProp, ParamListBase} from '@react-navigation/native';
-import {H3, Button, Image} from '../../components';
+import {H3, Button, Image, FocusAwareStatusBar} from '../../components';
 import {colors, spacing, images, HP} from '../../constants';
 import stack from '../../constants/routes';
 import Swiper from 'react-native-swiper';
@@ -41,6 +41,10 @@ function OnBoarding({navigation}: IProps) {
 
   return (
     <View style={styles.container}>
+      <FocusAwareStatusBar
+        barStyle="light-content"
+        backgroundColor={colors.black}
+      />
       <Swiper
         showsButtons={false}
         autoplay={true}
