@@ -15,6 +15,7 @@ export {default as formatFlatListGridData} from './formatFlatListGridData';
 export {default as getIdFromUrl} from './getIdFromUrl';
 export {default as statusFilter} from './statusFilter';
 export {default as getNextPageFromUrl} from './getNextPageFromUrl';
+export {default as getNumbersOfItemFromArray} from './getNumbersOfItemFromArray';
 export {
   showSuccessMessage,
   showErrorMessage,

@@ -69,8 +69,5 @@ const useStyles = (props: {theme: any}) =>
       alignItems: 'center',
       paddingHorizontal: spacing.small,
       paddingVertical: spacing.xsmall,
-      borderColor: 'red',
-      borderWidth: 1,
-      borderStyle: 'solid',
     },
   });

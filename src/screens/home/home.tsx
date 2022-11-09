@@ -9,7 +9,13 @@ import {
   FoodCard,
   FlatList,
 } from '../../components';
-import {colors, spacing, placeholdersImage} from '../../constants';
+import {
+  colors,
+  spacing,
+  placeholdersImage,
+  getNumbersOfItemFromArray,
+  showErrorMessage,
+} from '../../constants';
 import {HomeHeader, CartCard} from '../../partials';
 import {useAppDispatch, useAppSelector} from '../../redux/redux-hooks';
 import stack from '../../constants/routes';
@@ -37,10 +43,12 @@ function Home({navigation}: IProps) {
 
   useEffect(() => {
     if (categoriesState.status === 'failed') {
-      Alert.alert('Error occured');
+      showErrorMessage('Error occured');
     } else {
-      setCategoriesList(categoriesState?.data);
-      setCategoriesListSearch(categoriesState?.data);
+      const categoriesData = categoriesState?.data;
+      const firstSixItems = getNumbersOfItemFromArray(categoriesData, 6);
+      setCategoriesList(firstSixItems);
+      setCategoriesListSearch(firstSixItems);
     }
   }, [categoriesState]);
 
@@ -50,9 +58,11 @@ function Home({navigation}: IProps) {
 
   useEffect(() => {
     if (mealsState.status === 'failed') {
-      Alert.alert('Error occured');
+      showErrorMessage('Error occured');
     } else {
-      setMealsList(mealsState?.data);
+      const mealsData = mealsState?.data;
+      const firstFiveItems = getNumbersOfItemFromArray(mealsData, 5);
+      setMealsList(firstFiveItems);
     }
   }, [mealsState]);
 
@@ -106,8 +116,6 @@ function Home({navigation}: IProps) {
       />
     );
   };
-
-  console.log(cartList, 'list');
 
   return (
     <>
@@ -176,7 +184,6 @@ const styles = StyleSheet.create({
   },
   headerContainer: {
     marginHorizontal: spacing.xxsmall,
-    // paddingTop: spacing.xxsmall,
   },
   searchInputContainer: {
     marginTop: spacing.xsmall,
