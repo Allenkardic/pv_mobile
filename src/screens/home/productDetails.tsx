@@ -29,9 +29,11 @@ const imgSize = HP('20%');
 function ProductDetails({navigation, route}: IProps) {
   const dispatch = useAppDispatch();
   const cartList = useAppSelector(state => state.carts.data);
-
   const itemToAddOrDelete = route?.params?.item;
-  const itemExists = cartList?.includes(itemToAddOrDelete);
+  const itemExists = cartList?.some(
+    item => item?.idCategory === itemToAddOrDelete?.idCategory,
+  );
+
   const [sizesList, setSizesList] = useState([
     {title: `Small 8*`, price: 9.99, isSelected: true},
     {title: `Medium 12*`, price: 12.99, isSelected: false},
