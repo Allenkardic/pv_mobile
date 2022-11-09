@@ -1,15 +1,15 @@
 import React from 'react';
-import FlashMessage from 'react-native-flash-message';
 import {Provider} from 'react-redux';
 import {PersistGate} from 'redux-persist/integration/react';
-import Entry from './navigation/AppNavigator';
+import AppNavigator from './navigation/AppNavigator';
 import {store, persistor} from './redux';
+import FlashMessage from 'react-native-flash-message';
 
 const App = () => {
   return (
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
-        <Entry />
+        <AppNavigator />
         <FlashMessage position="top" />
       </PersistGate>
     </Provider>
