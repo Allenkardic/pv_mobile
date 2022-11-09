@@ -13,7 +13,7 @@ import {Image, H6} from './';
 
 interface IProps {
   title: string;
-  isSelected: boolean;
+  isSelected?: boolean;
   image?: string;
   onPress: () => void;
 }
@@ -48,7 +48,7 @@ export default function ImageWithName({
   );
 }
 
-const useStyles = (props: {theme: any; isSelected: boolean}) =>
+const useStyles = (props: {theme: any; isSelected?: boolean}) =>
   StyleSheet.create({
     container: {
       height: HP('11%'),

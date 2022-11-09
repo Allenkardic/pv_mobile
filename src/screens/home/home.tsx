@@ -28,9 +28,11 @@ import {useAppDispatch, useAppSelector} from '../../redux/redux-hooks';
 import stack from '../../constants/routes';
 import {getCategories, getMeals} from '../../redux/slice';
 import {MealsType, CategoriesType} from '../../types';
+
 interface IProps {
   navigation: NavigationProp<ParamListBase>;
 }
+
 function Home({navigation}: IProps) {
   const dispatch = useAppDispatch();
   const mealsState = useAppSelector(state => state.meals);
@@ -88,9 +90,9 @@ function Home({navigation}: IProps) {
     setSearchedValue(text);
   };
 
-  const handleSelectedMeal = (item: any) => {
+  const handleSelectedMeal = (item: MealsType) => {
     const itemToEdit = item;
-    const updatedProduct: any = [...mealsList].map((el: any) => {
+    const updatedProduct: MealsType[] = [...mealsList].map((el: MealsType) => {
       if (el.idMeal === itemToEdit.idMeal) {
         el.isSelected = !el.isSelected;
       } else {
@@ -101,7 +103,8 @@ function Home({navigation}: IProps) {
     setMealsList(updatedProduct);
   };
 
-  const renderItemCategories = ({item}: any) => {
+  type Categories = {item: CategoriesType};
+  const renderItemCategories = ({item}: Categories) => {
     const {strCategory, strCategoryThumb} = item;
     return (
       <FoodCard
@@ -115,7 +118,8 @@ function Home({navigation}: IProps) {
     );
   };
 
-  const renderItemMeals = ({item}: any) => {
+  type Meals = {item: MealsType};
+  const renderItemMeals = ({item}: Meals) => {
     const {strMeal, strMealThumb, isSelected} = item;
     return (
       <ImageWithName
