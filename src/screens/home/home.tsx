@@ -1,5 +1,11 @@
 import React, {useState, useEffect} from 'react';
-import {View, StyleSheet, SafeAreaView} from 'react-native';
+import {
+  View,
+  StyleSheet,
+  SafeAreaView,
+  ScrollView,
+  RefreshControl,
+} from 'react-native';
 import {NavigationProp, ParamListBase} from '@react-navigation/native';
 import {
   H4,
@@ -31,6 +37,7 @@ function Home({navigation}: IProps) {
   const categoriesState = useAppSelector(state => state.categories);
   const cartList = useAppSelector(state => state.carts.data);
   const {productDetails} = stack.stack;
+  const [refreshing, setRefreshing] = useState(true);
   const [searchedValue, setSearchedValue] = useState('');
   const [mealsList, setMealsList] = useState<MealsType[]>([]);
   const [categoriesList, setCategoriesList] = useState<CategoriesType[]>([]);
@@ -40,7 +47,7 @@ function Home({navigation}: IProps) {
 
   useEffect(() => {
     dispatch(getCategories());
-  }, []);
+  }, [refreshing]);
 
   useEffect(() => {
     if (categoriesState.status === 'failed') {
@@ -51,11 +58,12 @@ function Home({navigation}: IProps) {
       setCategoriesList(firstSixItems);
       setCategoriesListSearch(firstSixItems);
     }
+    setRefreshing(false);
   }, [categoriesState]);
 
   useEffect(() => {
     dispatch(getMeals('Pasta'));
-  }, []);
+  }, [refreshing]);
 
   useEffect(() => {
     if (mealsState.status === 'failed') {
@@ -65,6 +73,7 @@ function Home({navigation}: IProps) {
       const firstFiveItems = getNumbersOfItemFromArray(mealsData, 5);
       setMealsList(firstFiveItems);
     }
+    setRefreshing(false);
   }, [mealsState]);
 
   const handleSearch = (text: string) => {
@@ -118,65 +127,71 @@ function Home({navigation}: IProps) {
     );
   };
 
+  const onRefresh = () => {
+    setRefreshing(true);
+  };
+
   return (
     <>
-      <View style={styles.container}>
-        <SafeAreaView>
-          <FocusAwareStatusBar
-            barStyle="dark-content"
-            backgroundColor={colors.white}
+      <ScrollView
+        scrollEnabled={false}
+        contentContainerStyle={styles.container}
+        refreshControl={
+          <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
+        }>
+        <View style={styles.container}>
+          <SafeAreaView>
+            <FocusAwareStatusBar
+              barStyle="dark-content"
+              backgroundColor={colors.white}
+            />
+            <HomeHeader
+              name="Aliakwe"
+              image={placeholdersImage}
+              style={styles.headerContainer}
+            />
+          </SafeAreaView>
+          <SearchInput
+            value={searchedValue}
+            onChangeText={(text: string) => handleSearch(text)}
+            placeholder="search.."
+            filterCount={2}
+            style={styles.searchInputContainer}
           />
-          <HomeHeader
-            name="Aliakwe"
-            image={placeholdersImage}
-            style={styles.headerContainer}
-          />
-        </SafeAreaView>
-        <SearchInput
-          value={searchedValue}
-          onChangeText={(text: string) => handleSearch(text)}
-          placeholder="search.."
-          filterCount={2}
-          style={styles.searchInputContainer}
-        />
-        <View
-          style={{
-            marginLeft: spacing.xxsmall,
-          }}>
-          <FlatList
-            horizontal
-            data={mealsList}
-            renderItem={renderItemMeals}
-            emptyListText="There are no meals found"
-            onEndReached={() => {}}
-            refreshing={mealsState.status === 'loading'}
-            keyExtractor={(_: any, index: number) => {
-              return index.toString() ?? '';
-            }}
-          />
-        </View>
-        <View style={styles.seeAllContainer}>
-          <H4 bold>Popular items</H4>
-          <H6 color={colors.greyDark}>See All</H6>
-        </View>
+          <View style={styles.flatListContainer}>
+            <FlatList
+              horizontal
+              data={mealsList}
+              renderItem={renderItemMeals}
+              emptyListText="There are no meals found"
+              onEndReached={() => {}}
+              refreshing={mealsState.status === 'loading'}
+              keyExtractor={(_: any, index: number) => {
+                return index.toString() ?? '';
+              }}
+            />
+          </View>
+          <View style={styles.seeAllContainer}>
+            <H4 bold>Popular items</H4>
+            <H6 color={colors.greyDark}>See All</H6>
+          </View>
 
-        <View
-          style={{
-            marginLeft: spacing.xxsmall,
-          }}>
-          <FlatList
-            horizontal
-            data={categoriesListSearch}
-            renderItem={renderItemCategories}
-            emptyListText="There are no categories found"
-            onEndReached={() => {}}
-            refreshing={categoriesState.status === 'loading'}
-            keyExtractor={(_: any, index: number) => {
-              return index.toString() ?? '';
-            }}
-          />
+          <View style={styles.flatListContainer}>
+            <FlatList
+              horizontal
+              data={categoriesListSearch}
+              renderItem={renderItemCategories}
+              emptyListText="There are no categories found"
+              onEndReached={() => {}}
+              refreshing={categoriesState.status === 'loading'}
+              keyExtractor={(_: any, index: number) => {
+                return index.toString() ?? '';
+              }}
+            />
+          </View>
         </View>
-      </View>
+      </ScrollView>
+
       <View style={{marginBottom: spacing.xsmall}}>
         <CartCard data={cartList} />
       </View>
@@ -194,6 +209,9 @@ const styles = StyleSheet.create({
     marginTop: spacing.xsmall,
     marginBottom: spacing.xsmall,
     marginHorizontal: spacing.xxsmall,
+  },
+  flatListContainer: {
+    marginLeft: spacing.xxsmall,
   },
   seeAllContainer: {
     flexDirection: 'row',
