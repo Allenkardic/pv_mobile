@@ -7,13 +7,13 @@ import EmptyList from './emptyList';
 
 interface IProps {
   data: any[] | [];
-  onRefresh: any;
+  onRefresh?: any;
   onEndReached: any;
   renderItem: any;
   refreshing: boolean;
   showsVerticalScrollIndicator?: boolean;
   keyExtractor: (_: any, index: number) => any;
-  emptyListText: string;
+  emptyListText?: string;
   listHeader?: any;
   style?: ViewStyle;
   horizontal?: boolean;
@@ -51,15 +51,6 @@ export default function SJFlatList(props: IProps) {
       entering={FadeIn.duration(300)}
       showsVerticalScrollIndicator={showsVerticalScrollIndicator || false}
       ListEmptyComponent={<EmptyList subTitle={emptyListText} />}
-      refreshControl={
-        <RefreshControl
-          refreshing={refreshing}
-          onRefresh={onRefresh}
-          title=""
-          tintColor={theme.colors.text}
-          titleColor={theme.colors.text}
-        />
-      }
       ListHeaderComponent={listHeader || <View style={{height: 10}} />}
       {...otherProps}
     />

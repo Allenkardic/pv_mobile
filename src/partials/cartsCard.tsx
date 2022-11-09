@@ -1,15 +1,16 @@
 import React from 'react';
-import {StyleSheet, View, ImageBackground} from 'react-native';
+import {StyleSheet, View, ImageBackground, ScrollView} from 'react-native';
 import {useTheme} from '@react-navigation/native';
-import {colors, spacing, images, placeholdersImage} from '../constants';
+import {colors, spacing, images} from '../constants';
 import {H4, H6, Image} from '../components';
 
-interface Props {}
+interface Props {
+  data: any;
+}
 
-export default function CartCard({}: Props) {
+export default function CartCard({data}: Props) {
   const theme = useTheme();
   const styles = useStyles({theme});
-  const list = [{image: placeholdersImage}, {image: placeholdersImage}];
   const imgContainerSize = 35;
   const imgSize = 25;
   return (
@@ -22,30 +23,34 @@ export default function CartCard({}: Props) {
             style={{marginBottom: spacing.mini}}>
             Cart
           </H4>
-          <H6 color={colors.white}>2 Items</H6>
+          <H6 color={colors.white}>{`${data.length} ${
+            data.length <= 1 ? 'Item' : 'Items'
+          }`}</H6>
         </View>
-        <View style={styles.imgStyle}>
-          {list.map((item, index) => (
-            <View
-              key={index}
-              style={{
-                height: imgContainerSize,
-                width: imgContainerSize,
-                borderRadius: imgContainerSize / 2,
-                backgroundColor: colors.white,
-                justifyContent: 'center',
-                alignItems: 'center',
-                marginRight: list.length === index + 1 ? 0 : spacing.mini,
-              }}>
-              <Image
-                source={{uri: item.image}}
+        <View>
+          <ScrollView horizontal={true}>
+            {data.map((item: any, index: string) => (
+              <View
+                key={index}
                 style={{
-                  height: imgSize,
-                  width: imgSize,
-                }}
-              />
-            </View>
-          ))}
+                  height: imgContainerSize,
+                  width: imgContainerSize,
+                  borderRadius: imgContainerSize / 2,
+                  backgroundColor: colors.white,
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  marginRight: data.length === index + 1 ? 0 : spacing.mini,
+                }}>
+                <Image
+                  source={{uri: item.strCategoryThumb}}
+                  style={{
+                    height: imgSize,
+                    width: imgSize,
+                  }}
+                />
+              </View>
+            ))}
+          </ScrollView>
         </View>
       </View>
     </ImageBackground>
@@ -64,8 +69,8 @@ const useStyles = (props: {theme: any}) =>
       alignItems: 'center',
       paddingHorizontal: spacing.small,
       paddingVertical: spacing.xsmall,
-    },
-    imgStyle: {
-      flexDirection: 'row',
+      borderColor: 'red',
+      borderWidth: 1,
+      borderStyle: 'solid',
     },
   });

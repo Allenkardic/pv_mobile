@@ -22,6 +22,7 @@ function Home({navigation}: IProps) {
   const dispatch = useAppDispatch();
   const mealsState = useAppSelector(state => state.meals);
   const categoriesState = useAppSelector(state => state.categories);
+  const cartList = useAppSelector(state => state.carts.data);
   const {productDetails} = stack.stack;
   const [searchedValue, setSearchedValue] = useState('');
   const [mealsList, setMealsList] = useState<MealsType[]>([]);
@@ -106,6 +107,8 @@ function Home({navigation}: IProps) {
     );
   };
 
+  console.log(cartList, 'list');
+
   return (
     <>
       <View style={styles.container}>
@@ -123,7 +126,6 @@ function Home({navigation}: IProps) {
           filterCount={2}
           style={styles.searchInputContainer}
         />
-
         <View
           style={{
             marginLeft: spacing.xxsmall,
@@ -134,7 +136,6 @@ function Home({navigation}: IProps) {
             renderItem={renderItemMeals}
             emptyListText="There are no meals found"
             onEndReached={() => {}}
-            onRefresh={() => {}}
             refreshing={mealsState.status === 'loading'}
             keyExtractor={(_: any, index: number) => {
               return index.toString() ?? '';
@@ -156,7 +157,6 @@ function Home({navigation}: IProps) {
             renderItem={renderItemCategories}
             emptyListText="There are no categories found"
             onEndReached={() => {}}
-            onRefresh={() => {}}
             refreshing={categoriesState.status === 'loading'}
             keyExtractor={(_: any, index: number) => {
               return index.toString() ?? '';
@@ -165,7 +165,7 @@ function Home({navigation}: IProps) {
         </View>
       </View>
       <View style={{marginBottom: spacing.xsmall}}>
-        <CartCard />
+        <CartCard data={cartList} />
       </View>
     </>
   );
