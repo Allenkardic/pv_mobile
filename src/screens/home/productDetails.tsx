@@ -113,7 +113,7 @@ function ProductDetails({navigation, route}: IProps) {
         <PriceCounter price={price} style={styles.priceCounterContainer} />
         <Button
           text="Next"
-          onPress={() => {}}
+          onPress={() => navigation.goBack()}
           backgroundColor={colors.primary}
         />
       </View>
