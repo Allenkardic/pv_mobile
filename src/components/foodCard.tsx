@@ -117,7 +117,7 @@ const useStyles = (props: {theme: any}) =>
       marginHorizontal: spacing.mini,
     },
     imgFire: {
-      tintColor: 'trnasparent',
+      tintColor: 'transparent',
       width: 20,
       height: 20,
     },
