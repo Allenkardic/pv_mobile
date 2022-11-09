@@ -84,7 +84,7 @@ function Home({navigation}: IProps) {
     const {strCategory, strCategoryThumb} = item;
     return (
       <FoodCard
-        onPress={() => {}}
+        onPress={() => navigation.navigate(productDetails, {item})}
         image={strCategoryThumb}
         title={strCategory}
         price={9.9}

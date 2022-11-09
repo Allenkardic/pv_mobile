@@ -1,46 +1,48 @@
-import React, {useRef, useCallback, useMemo, useState} from 'react';
-import {
-  View,
-  StyleSheet,
-  Text,
-  Platform,
-  ScrollView,
-  SafeAreaView,
-} from 'react-native';
+import React, {useState} from 'react';
+import {View, StyleSheet, ScrollView} from 'react-native';
 import {NavigationProp, ParamListBase} from '@react-navigation/native';
-
 import {
   Button,
-  H2,
-  H3,
-  H6,
-  H4,
   H5,
-  Icon,
   Image,
   NavigationHeader,
   ProductTypeCard,
 } from '../../components';
 import {ProductReview, PriceCounter} from '../../partials';
-import {
-  borderRadius,
-  colors,
-  HP,
-  placeholdersImage,
-  spacing,
-  images,
-  ellipsis,
-} from '../../constants';
-
-import stack from '../../constants/routes';
+import {borderRadius, colors, HP, spacing, ellipsis} from '../../constants';
 
 interface IProps {
   navigation: NavigationProp<ParamListBase>;
+  route?: any;
 }
 const imgSize = HP('20%');
-const helper =
-  'MMailling cheese pizza making with Extra c=virgin and eonfmb  sdzhhfzdnm jkfdzmbbmzdn jhkfdkjhzjkd hjdfhmhjdf  hdfjhdfhhsb dhjfhfh hdfhjdfhmjd  hjdmhd bjdbfhfhfdh hjdfjbhhjd hjd';
-function ProductDetails({navigation}: IProps) {
+function ProductDetails({navigation, route}: IProps) {
+  const {strCategory, strCategoryDescription, strCategoryThumb} =
+    route.params.item;
+
+  const [sizesList, setSizesList] = useState([
+    {title: `Small 8*`, price: 9.99, isSelected: true},
+    {title: `Medium 12*`, price: 12.99, isSelected: false},
+    {title: `Large 18*`, price: 16.99, isSelected: false},
+  ]);
+  const [price, setPrice] = useState(sizesList[0].price);
+
+  const handleSizesPress = (item: any) => {
+    const itemToEdit = item;
+    const updatedProduct: any = [...sizesList].map((el: any) => {
+      if (el.title === itemToEdit.title) {
+        el.isSelected = !el.isSelected;
+      } else {
+        el.isSelected = false;
+      }
+      return el;
+    });
+    setPrice(itemToEdit.price);
+    setSizesList(updatedProduct);
+  };
+
+  console.log(route.params.item, 'item');
+
   return (
     <View style={styles.container}>
       <ScrollView>
@@ -51,50 +53,30 @@ function ProductDetails({navigation}: IProps) {
           />
         </View>
         <View style={styles.contentTwo}>
-          <Image source={{uri: placeholdersImage}} style={styles.imgStyle} />
-          <ProductReview />
-          <View
-            style={{
-              flexDirection: 'row',
-              alignItems: 'center',
-              justifyContent: 'center',
-            }}>
-            <ProductTypeCard
-              onPress={() => {}}
-              title={`Small 8*`}
-              price={200}
-              isSelected={true}
-            />
-            <ProductTypeCard
-              onPress={() => {}}
-              title={`Medium 12*`}
-              price={200}
-              isSelected={false}
-            />
-            <ProductTypeCard
-              onPress={() => {}}
-              title={`Large 18*`}
-              price={200}
-              isSelected={false}
-            />
+          <Image source={{uri: strCategoryThumb}} style={styles.imgStyle} />
+          <ProductReview name={strCategory} />
+          <View style={styles.sizeListContainer}>
+            {sizesList.map((item, index) => (
+              <ProductTypeCard
+                key={index}
+                onPress={() => handleSizesPress(item)}
+                title={item.title}
+                price={item.price}
+                isSelected={item.isSelected}
+              />
+            ))}
           </View>
 
           <View style={styles.helperTextContainer}>
             <H5 center color={colors.greyDark} style={styles.helperText}>
-              {ellipsis(helper, 170)}
+              {ellipsis(strCategoryDescription, 170)}
               <H5 color={colors.primary}>More</H5>
             </H5>
           </View>
-          <PriceCounter
-            price={19.99}
-            style={{
-              marginHorizontal: spacing.xxsmall,
-              marginTop: spacing.medium,
-            }}
-          />
         </View>
       </ScrollView>
       <View style={styles.bottomContent}>
+        <PriceCounter price={price} style={styles.priceCounterContainer} />
         <Button
           text="Next"
           onPress={() => {}}
@@ -120,23 +102,28 @@ const styles = StyleSheet.create({
     borderTopRightRadius: borderRadius.large,
   },
   imgStyle: {
-    top: -HP('8%'),
+    top: -HP('10%'),
     marginLeft: 'auto',
     marginRight: 'auto',
     width: imgSize,
     height: imgSize,
     borderRadius: imgSize / 2,
   },
+  sizeListContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
   helperTextContainer: {
-    marginLeft: 'auto',
-    marginRight: 'auto',
+    paddingHorizontal: spacing.xxsmall,
     marginTop: spacing.xsmall,
   },
-
   helperText: {
     lineHeight: 25,
   },
-
+  priceCounterContainer: {
+    marginBottom: spacing.xsmall,
+  },
   bottomContent: {
     paddingBottom: spacing.xsmall,
     paddingHorizontal: spacing.xxsmall,

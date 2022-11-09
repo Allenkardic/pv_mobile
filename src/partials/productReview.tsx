@@ -3,15 +3,16 @@ import {StyleSheet, View} from 'react-native';
 import {colors, spacing, images} from '../constants';
 import {H5, Image, H6, H4, Icon} from '../components';
 
-interface Props {}
+interface Props {
+  name: string;
+}
 
-export default function ProductReview({}: Props) {
+export default function ProductReview({name}: Props) {
   const styles = useStyles();
-
   return (
     <View style={{top: -40}}>
       <H4 bold center>
-        Melting Chease Pizza
+        {name}
       </H4>
       <View style={styles.popContainer}>
         <Image source={images.pop} style={styles.popImg} />
