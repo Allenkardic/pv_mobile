@@ -192,7 +192,7 @@ function Home({navigation}: IProps) {
         </View>
       </ScrollView>
 
-      <View style={{marginBottom: spacing.xsmall}}>
+      <View style={styles.bottomContent}>
         <CartCard data={cartList} />
       </View>
     </>
@@ -220,6 +220,9 @@ const styles = StyleSheet.create({
     paddingHorizontal: spacing.xxsmall,
     marginTop: spacing.xsmall,
     marginBottom: spacing.xxsmall,
+  },
+  bottomContent: {
+    marginBottom: spacing.xsmall,
   },
 });
 
