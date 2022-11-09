@@ -9,7 +9,16 @@ import {
   ProductTypeCard,
 } from '../../components';
 import {ProductReview, PriceCounter} from '../../partials';
-import {borderRadius, colors, HP, spacing, ellipsis} from '../../constants';
+import {
+  borderRadius,
+  colors,
+  HP,
+  spacing,
+  ellipsis,
+  showSuccessMessage,
+} from '../../constants';
+import {useAppDispatch, useAppSelector} from '../../redux/redux-hooks';
+import {addToCart} from '../../redux/slice';
 
 interface IProps {
   navigation: NavigationProp<ParamListBase>;
@@ -17,9 +26,13 @@ interface IProps {
 }
 const imgSize = HP('20%');
 function ProductDetails({navigation, route}: IProps) {
+  const dispatch = useAppDispatch();
+  const cartList = useAppSelector(state => state.carts.data);
   const {strCategory, strCategoryDescription, strCategoryThumb} =
     route.params.item;
 
+  const itemToAddOrDelete = route.params.item;
+  const itemExists = cartList.includes(itemToAddOrDelete);
   const [sizesList, setSizesList] = useState([
     {title: `Small 8*`, price: 9.99, isSelected: true},
     {title: `Medium 12*`, price: 12.99, isSelected: false},
@@ -41,7 +54,19 @@ function ProductDetails({navigation, route}: IProps) {
     setSizesList(updatedProduct);
   };
 
-  console.log(route.params.item, 'item');
+  const handleAddOrRemoveCart = () => {
+    let result;
+    if (!itemExists) {
+      result = [...cartList, itemToAddOrDelete];
+      showSuccessMessage('Item added to cart successfully');
+    } else {
+      result = cartList.filter((el: any) => {
+        return el.idCategory !== itemToAddOrDelete.idCategory;
+      });
+      showSuccessMessage('Item deleted from cart successfully');
+    }
+    dispatch(addToCart(result));
+  };
 
   return (
     <View style={styles.container}>
@@ -49,7 +74,8 @@ function ProductDetails({navigation, route}: IProps) {
         <View style={styles.contentOne}>
           <NavigationHeader
             onPressLeftIcon={() => navigation.goBack()}
-            onPressRightIcon={() => {}}
+            onPressRightIcon={handleAddOrRemoveCart}
+            isFavourite={itemExists}
           />
         </View>
         <View style={styles.contentTwo}>

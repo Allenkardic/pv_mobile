@@ -1,9 +1,14 @@
 import {combineReducers} from '@reduxjs/toolkit';
-import {mealsSliceReducer, categoriesSliceReducer} from './slice';
+import {
+  mealsSliceReducer,
+  categoriesSliceReducer,
+  addToCartSliceReducer,
+} from './slice';
 
 const rootReducer = combineReducers({
   meals: mealsSliceReducer,
   categories: categoriesSliceReducer,
+  carts: addToCartSliceReducer,
 });
 
 export type RootState = ReturnType<typeof rootReducer>;

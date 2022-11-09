@@ -13,9 +13,14 @@ import {colors, spacing} from '../constants';
 interface IProps {
   onPressLeftIcon: (event: GestureResponderEvent) => void;
   onPressRightIcon: (event: GestureResponderEvent) => void;
+  isFavourite: boolean;
 }
 
-function NavigationHeader({onPressLeftIcon, onPressRightIcon}: IProps) {
+function NavigationHeader({
+  onPressLeftIcon,
+  onPressRightIcon,
+  isFavourite,
+}: IProps) {
   return (
     <SafeAreaView>
       <View style={styles.container}>
@@ -27,9 +32,9 @@ function NavigationHeader({onPressLeftIcon, onPressRightIcon}: IProps) {
         />
         <Icon
           onPress={onPressRightIcon}
-          name="heart-outline"
+          name={isFavourite ? 'heart' : 'heart-outline'}
           size={25}
-          color={colors.white}
+          color={isFavourite ? colors.red : colors.white}
         />
       </View>
     </SafeAreaView>
