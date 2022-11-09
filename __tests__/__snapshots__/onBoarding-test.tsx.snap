@@ -1,0 +1,1023 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductDetails Screen uses props renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#111111",
+      "flex": 1,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+          "flex": 1,
+          "position": "relative",
+        },
+        undefined,
+      ]
+    }
+  >
+    <RCTScrollView
+      activeDotColor="#FFFFFF"
+      activeDotStyle={
+        Object {
+          "height": 2,
+          "marginRight": 24,
+          "top": -213.5,
+          "width": 15,
+        }
+      }
+      automaticallyAdjustContentInsets={false}
+      autoplay={true}
+      autoplayDirection={true}
+      autoplayTimeout={2.5}
+      bounces={false}
+      contentContainerStyle={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+          },
+          undefined,
+        ]
+      }
+      contentOffset={
+        Object {
+          "x": 0,
+        }
+      }
+      disableNextButton={false}
+      disablePrevButton={false}
+      dotColor="#263238"
+      dotStyle={
+        Object {
+          "height": 2,
+          "marginRight": 24,
+          "top": -213.5,
+          "width": 15,
+        }
+      }
+      horizontal={true}
+      index={0}
+      loadMinimal={false}
+      loadMinimalSize={1}
+      loop={true}
+      onIndexChanged={[Function]}
+      onMomentumScrollEnd={[Function]}
+      onScrollBeginDrag={[Function]}
+      onScrollEndDrag={[Function]}
+      pagingEnabled={true}
+      removeClippedSubviews={true}
+      scrollsToTop={false}
+      showsButtons={false}
+      showsHorizontalScrollIndicator={false}
+      showsPagination={true}
+      showsVerticalScrollIndicator={false}
+    >
+      <View>
+        <View
+          style={
+            Array [
+              Object {
+                "height": 1334,
+                "width": 750,
+              },
+              Object {
+                "backgroundColor": "transparent",
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Object {
+                "height": 1000.5,
+                "justifyContent": "center",
+              }
+            }
+          >
+            <Image
+              source={
+                Object {
+                  "testUri": "../../../assets/images/onboardingThree.png",
+                }
+              }
+              style={
+                Array [
+                  Object {
+                    "borderRadius": 33.25,
+                    "height": 66.5,
+                    "resizeMode": "contain",
+                    "width": 66.5,
+                  },
+                  Object {
+                    "height": 400,
+                    "marginLeft": "auto",
+                    "marginRight": "auto",
+                    "width": 400,
+                  },
+                ]
+              }
+            />
+            <View
+              style={
+                Object {
+                  "marginTop": 48,
+                  "paddingHorizontal": 24,
+                }
+              }
+            >
+              <Text
+                style={
+                  Array [
+                    Object {
+                      "color": "rgb(28, 28, 30)",
+                      "fontFamily": "Montserrat-Regular",
+                      "fontSize": 28,
+                    },
+                    Object {
+                      "fontSize": 31,
+                      "textAlign": "center",
+                    },
+                    Object {
+                      "color": "#FFFFFF",
+                    },
+                    Object {
+                      "fontFamily": "Montserrat-Bold",
+                    },
+                    undefined,
+                    undefined,
+                    undefined,
+                    undefined,
+                  ]
+                }
+              >
+                Lock funds you don't want to
+              </Text>
+              <Text
+                style={
+                  Array [
+                    Object {
+                      "color": "rgb(28, 28, 30)",
+                      "fontFamily": "Montserrat-Regular",
+                      "fontSize": 28,
+                    },
+                    Object {
+                      "fontSize": 31,
+                      "marginTop": 8,
+                      "textAlign": "center",
+                    },
+                    Object {
+                      "color": "#FFFFFF",
+                    },
+                    Object {
+                      "fontFamily": "Montserrat-Bold",
+                    },
+                    undefined,
+                    undefined,
+                    undefined,
+                    undefined,
+                  ]
+                }
+              >
+                be tempted to touch
+              </Text>
+            </View>
+          </View>
+        </View>
+        <View
+          style={
+            Array [
+              Object {
+                "height": 1334,
+                "width": 750,
+              },
+              Object {
+                "backgroundColor": "transparent",
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Object {
+                "height": 1000.5,
+                "justifyContent": "center",
+              }
+            }
+          >
+            <Image
+              source={
+                Object {
+                  "testUri": "../../../assets/images/onboardingOne.png",
+                }
+              }
+              style={
+                Array [
+                  Object {
+                    "borderRadius": 33.25,
+                    "height": 66.5,
+                    "resizeMode": "contain",
+                    "width": 66.5,
+                  },
+                  Object {
+                    "height": 400,
+                    "marginLeft": "auto",
+                    "marginRight": "auto",
+                    "width": 400,
+                  },
+                ]
+              }
+            />
+            <View
+              style={
+                Object {
+                  "marginTop": 48,
+                  "paddingHorizontal": 24,
+                }
+              }
+            >
+              <Text
+                style={
+                  Array [
+                    Object {
+                      "color": "rgb(28, 28, 30)",
+                      "fontFamily": "Montserrat-Regular",
+                      "fontSize": 28,
+                    },
+                    Object {
+                      "fontSize": 31,
+                      "textAlign": "center",
+                    },
+                    Object {
+                      "color": "#FFFFFF",
+                    },
+                    Object {
+                      "fontFamily": "Montserrat-Bold",
+                    },
+                    undefined,
+                    undefined,
+                    undefined,
+                    undefined,
+                  ]
+                }
+              >
+                Build your savings with ease &
+              </Text>
+              <Text
+                style={
+                  Array [
+                    Object {
+                      "color": "rgb(28, 28, 30)",
+                      "fontFamily": "Montserrat-Regular",
+                      "fontSize": 28,
+                    },
+                    Object {
+                      "fontSize": 31,
+                      "marginTop": 8,
+                      "textAlign": "center",
+                    },
+                    Object {
+                      "color": "#FFFFFF",
+                    },
+                    Object {
+                      "fontFamily": "Montserrat-Bold",
+                    },
+                    undefined,
+                    undefined,
+                    undefined,
+                    undefined,
+                  ]
+                }
+              >
+                discipline
+              </Text>
+            </View>
+          </View>
+        </View>
+        <View
+          style={
+            Array [
+              Object {
+                "height": 1334,
+                "width": 750,
+              },
+              Object {
+                "backgroundColor": "transparent",
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Object {
+                "height": 1000.5,
+                "justifyContent": "center",
+              }
+            }
+          >
+            <Image
+              source={
+                Object {
+                  "testUri": "../../../assets/images/onboardingTwo.png",
+                }
+              }
+              style={
+                Array [
+                  Object {
+                    "borderRadius": 33.25,
+                    "height": 66.5,
+                    "resizeMode": "contain",
+                    "width": 66.5,
+                  },
+                  Object {
+                    "height": 400,
+                    "marginLeft": "auto",
+                    "marginRight": "auto",
+                    "width": 400,
+                  },
+                ]
+              }
+            />
+            <View
+              style={
+                Object {
+                  "marginTop": 48,
+                  "paddingHorizontal": 24,
+                }
+              }
+            >
+              <Text
+                style={
+                  Array [
+                    Object {
+                      "color": "rgb(28, 28, 30)",
+                      "fontFamily": "Montserrat-Regular",
+                      "fontSize": 28,
+                    },
+                    Object {
+                      "fontSize": 31,
+                      "textAlign": "center",
+                    },
+                    Object {
+                      "color": "#FFFFFF",
+                    },
+                    Object {
+                      "fontFamily": "Montserrat-Bold",
+                    },
+                    undefined,
+                    undefined,
+                    undefined,
+                    undefined,
+                  ]
+                }
+              >
+                Invest with ease in verified
+              </Text>
+              <Text
+                style={
+                  Array [
+                    Object {
+                      "color": "rgb(28, 28, 30)",
+                      "fontFamily": "Montserrat-Regular",
+                      "fontSize": 28,
+                    },
+                    Object {
+                      "fontSize": 31,
+                      "marginTop": 8,
+                      "textAlign": "center",
+                    },
+                    Object {
+                      "color": "#FFFFFF",
+                    },
+                    Object {
+                      "fontFamily": "Montserrat-Bold",
+                    },
+                    undefined,
+                    undefined,
+                    undefined,
+                    undefined,
+                  ]
+                }
+              >
+                opportunities
+              </Text>
+            </View>
+          </View>
+        </View>
+        <View
+          style={
+            Array [
+              Object {
+                "height": 1334,
+                "width": 750,
+              },
+              Object {
+                "backgroundColor": "transparent",
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Object {
+                "height": 1000.5,
+                "justifyContent": "center",
+              }
+            }
+          >
+            <Image
+              source={
+                Object {
+                  "testUri": "../../../assets/images/onboardingThree.png",
+                }
+              }
+              style={
+                Array [
+                  Object {
+                    "borderRadius": 33.25,
+                    "height": 66.5,
+                    "resizeMode": "contain",
+                    "width": 66.5,
+                  },
+                  Object {
+                    "height": 400,
+                    "marginLeft": "auto",
+                    "marginRight": "auto",
+                    "width": 400,
+                  },
+                ]
+              }
+            />
+            <View
+              style={
+                Object {
+                  "marginTop": 48,
+                  "paddingHorizontal": 24,
+                }
+              }
+            >
+              <Text
+                style={
+                  Array [
+                    Object {
+                      "color": "rgb(28, 28, 30)",
+                      "fontFamily": "Montserrat-Regular",
+                      "fontSize": 28,
+                    },
+                    Object {
+                      "fontSize": 31,
+                      "textAlign": "center",
+                    },
+                    Object {
+                      "color": "#FFFFFF",
+                    },
+                    Object {
+                      "fontFamily": "Montserrat-Bold",
+                    },
+                    undefined,
+                    undefined,
+                    undefined,
+                    undefined,
+                  ]
+                }
+              >
+                Lock funds you don't want to
+              </Text>
+              <Text
+                style={
+                  Array [
+                    Object {
+                      "color": "rgb(28, 28, 30)",
+                      "fontFamily": "Montserrat-Regular",
+                      "fontSize": 28,
+                    },
+                    Object {
+                      "fontSize": 31,
+                      "marginTop": 8,
+                      "textAlign": "center",
+                    },
+                    Object {
+                      "color": "#FFFFFF",
+                    },
+                    Object {
+                      "fontFamily": "Montserrat-Bold",
+                    },
+                    undefined,
+                    undefined,
+                    undefined,
+                    undefined,
+                  ]
+                }
+              >
+                be tempted to touch
+              </Text>
+            </View>
+          </View>
+        </View>
+        <View
+          style={
+            Array [
+              Object {
+                "height": 1334,
+                "width": 750,
+              },
+              Object {
+                "backgroundColor": "transparent",
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Object {
+                "height": 1000.5,
+                "justifyContent": "center",
+              }
+            }
+          >
+            <Image
+              source={
+                Object {
+                  "testUri": "../../../assets/images/onboardingThree.png",
+                }
+              }
+              style={
+                Array [
+                  Object {
+                    "borderRadius": 33.25,
+                    "height": 66.5,
+                    "resizeMode": "contain",
+                    "width": 66.5,
+                  },
+                  Object {
+                    "height": 400,
+                    "marginLeft": "auto",
+                    "marginRight": "auto",
+                    "width": 400,
+                  },
+                ]
+              }
+            />
+            <View
+              style={
+                Object {
+                  "marginTop": 48,
+                  "paddingHorizontal": 24,
+                }
+              }
+            >
+              <Text
+                style={
+                  Array [
+                    Object {
+                      "color": "rgb(28, 28, 30)",
+                      "fontFamily": "Montserrat-Regular",
+                      "fontSize": 28,
+                    },
+                    Object {
+                      "fontSize": 31,
+                      "textAlign": "center",
+                    },
+                    Object {
+                      "color": "#FFFFFF",
+                    },
+                    Object {
+                      "fontFamily": "Montserrat-Bold",
+                    },
+                    undefined,
+                    undefined,
+                    undefined,
+                    undefined,
+                  ]
+                }
+              >
+                Lock funds you don't want to
+              </Text>
+              <Text
+                style={
+                  Array [
+                    Object {
+                      "color": "rgb(28, 28, 30)",
+                      "fontFamily": "Montserrat-Regular",
+                      "fontSize": 28,
+                    },
+                    Object {
+                      "fontSize": 31,
+                      "marginTop": 8,
+                      "textAlign": "center",
+                    },
+                    Object {
+                      "color": "#FFFFFF",
+                    },
+                    Object {
+                      "fontFamily": "Montserrat-Bold",
+                    },
+                    undefined,
+                    undefined,
+                    undefined,
+                    undefined,
+                  ]
+                }
+              >
+                be tempted to touch
+              </Text>
+            </View>
+          </View>
+        </View>
+        <View
+          style={
+            Array [
+              Object {
+                "height": 1334,
+                "width": 750,
+              },
+              Object {
+                "backgroundColor": "transparent",
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Object {
+                "height": 1000.5,
+                "justifyContent": "center",
+              }
+            }
+          >
+            <Image
+              source={
+                Object {
+                  "testUri": "../../../assets/images/onboardingOne.png",
+                }
+              }
+              style={
+                Array [
+                  Object {
+                    "borderRadius": 33.25,
+                    "height": 66.5,
+                    "resizeMode": "contain",
+                    "width": 66.5,
+                  },
+                  Object {
+                    "height": 400,
+                    "marginLeft": "auto",
+                    "marginRight": "auto",
+                    "width": 400,
+                  },
+                ]
+              }
+            />
+            <View
+              style={
+                Object {
+                  "marginTop": 48,
+                  "paddingHorizontal": 24,
+                }
+              }
+            >
+              <Text
+                style={
+                  Array [
+                    Object {
+                      "color": "rgb(28, 28, 30)",
+                      "fontFamily": "Montserrat-Regular",
+                      "fontSize": 28,
+                    },
+                    Object {
+                      "fontSize": 31,
+                      "textAlign": "center",
+                    },
+                    Object {
+                      "color": "#FFFFFF",
+                    },
+                    Object {
+                      "fontFamily": "Montserrat-Bold",
+                    },
+                    undefined,
+                    undefined,
+                    undefined,
+                    undefined,
+                  ]
+                }
+              >
+                Build your savings with ease &
+              </Text>
+              <Text
+                style={
+                  Array [
+                    Object {
+                      "color": "rgb(28, 28, 30)",
+                      "fontFamily": "Montserrat-Regular",
+                      "fontSize": 28,
+                    },
+                    Object {
+                      "fontSize": 31,
+                      "marginTop": 8,
+                      "textAlign": "center",
+                    },
+                    Object {
+                      "color": "#FFFFFF",
+                    },
+                    Object {
+                      "fontFamily": "Montserrat-Bold",
+                    },
+                    undefined,
+                    undefined,
+                    undefined,
+                    undefined,
+                  ]
+                }
+              >
+                discipline
+              </Text>
+            </View>
+          </View>
+        </View>
+      </View>
+    </RCTScrollView>
+    <View
+      pointerEvents="none"
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "transparent",
+            "bottom": 25,
+            "flex": 1,
+            "flexDirection": "row",
+            "justifyContent": "center",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+          },
+          undefined,
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#FFFFFF",
+              "borderRadius": 4,
+              "height": 8,
+              "marginBottom": 3,
+              "marginLeft": 3,
+              "marginRight": 3,
+              "marginTop": 3,
+              "width": 8,
+            },
+            Object {
+              "height": 2,
+              "marginRight": 24,
+              "top": -213.5,
+              "width": 15,
+            },
+          ]
+        }
+      />
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#263238",
+              "borderRadius": 4,
+              "height": 8,
+              "marginBottom": 3,
+              "marginLeft": 3,
+              "marginRight": 3,
+              "marginTop": 3,
+              "width": 8,
+            },
+            Object {
+              "height": 2,
+              "marginRight": 24,
+              "top": -213.5,
+              "width": 15,
+            },
+          ]
+        }
+      />
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#263238",
+              "borderRadius": 4,
+              "height": 8,
+              "marginBottom": 3,
+              "marginLeft": 3,
+              "marginRight": 3,
+              "marginTop": 3,
+              "width": 8,
+            },
+            Object {
+              "height": 2,
+              "marginRight": 24,
+              "top": -213.5,
+              "width": 15,
+            },
+          ]
+        }
+      />
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#263238",
+              "borderRadius": 4,
+              "height": 8,
+              "marginBottom": 3,
+              "marginLeft": 3,
+              "marginRight": 3,
+              "marginTop": 3,
+              "width": 8,
+            },
+            Object {
+              "height": 2,
+              "marginRight": 24,
+              "top": -213.5,
+              "width": 15,
+            },
+          ]
+        }
+      />
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "marginBottom": 64,
+        "paddingHorizontal": 24,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "width": "48%",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "paddingTop": 0,
+          }
+        }
+      >
+        <View
+          accessibilityState={
+            Object {
+              "disabled": false,
+            }
+          }
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#0761d5",
+              "borderBottomLeftRadius": 0,
+              "borderColor": "transparent",
+              "borderRadius": 20,
+              "borderStyle": "solid",
+              "borderWidth": 1,
+              "height": 55,
+              "justifyContent": "center",
+              "opacity": 1,
+              "textAlign": "center",
+              "width": "100%",
+            }
+          }
+        >
+          <Text
+            style={
+              Array [
+                Object {
+                  "color": "rgb(28, 28, 30)",
+                  "fontFamily": "Montserrat-Regular",
+                  "fontSize": 28,
+                },
+                Object {
+                  "fontSize": 28,
+                  "textAlign": "left",
+                },
+                Object {
+                  "color": "#FFFFFF",
+                },
+                undefined,
+                Object {
+                  "fontFamily": "Montserrat-SemiBold",
+                },
+                undefined,
+                undefined,
+                undefined,
+              ]
+            }
+          >
+             
+            LOGIN
+             
+          </Text>
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "width": "48%",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "paddingTop": 0,
+          }
+        }
+      >
+        <View
+          accessibilityState={
+            Object {
+              "disabled": false,
+            }
+          }
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "transparent",
+              "borderBottomLeftRadius": 0,
+              "borderColor": "#FFFFFF",
+              "borderRadius": 20,
+              "borderStyle": "solid",
+              "borderWidth": 1,
+              "height": 55,
+              "justifyContent": "center",
+              "opacity": 1,
+              "textAlign": "center",
+              "width": "100%",
+            }
+          }
+        >
+          <Text
+            style={
+              Array [
+                Object {
+                  "color": "rgb(28, 28, 30)",
+                  "fontFamily": "Montserrat-Regular",
+                  "fontSize": 28,
+                },
+                Object {
+                  "fontSize": 28,
+                  "textAlign": "left",
+                },
+                Object {
+                  "color": "#FFFFFF",
+                },
+                undefined,
+                Object {
+                  "fontFamily": "Montserrat-SemiBold",
+                },
+                undefined,
+                undefined,
+                undefined,
+              ]
+            }
+          >
+             
+            REGISTER
+             
+          </Text>
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
