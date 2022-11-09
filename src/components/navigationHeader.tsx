@@ -1,12 +1,10 @@
 import React from 'react';
-
 import {
   StyleSheet,
   GestureResponderEvent,
   View,
   SafeAreaView,
 } from 'react-native';
-
 import {Icon} from '../components';
 import {colors, spacing} from '../constants';
 
